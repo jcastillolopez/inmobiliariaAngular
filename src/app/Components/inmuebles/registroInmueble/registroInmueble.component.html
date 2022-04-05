@@ -1,0 +1,70 @@
+<div class="container">
+  <div class="nav-tab">
+    <div class="titulo">
+        <h2>INMUEBLES</h2> 
+        <p>Por favor introduzca los datos en el registro</p>             
+          <ul>
+            <li [routerLink]="['/inmuebles']" routerLinkActive="activo">
+              inmuebles
+            </li>
+            <li [routerLink]="['/inmuebles/registro']" routerLinkActive="activo">
+               Registro de Inmuebles
+            </li>
+          </ul>
+        </div>
+   </div> 
+
+       <div class="registro">
+        <form FormGroup = "registroForm" (ngSubmit)="registrarse()">
+            <div class="mb-3">
+              <label class="form-label">Nombre</label>
+              <input type="text" class="form-control"formControlName="nombre">
+             </div>
+             <div class="mb-3">
+               <label class="form-label">Apellidos</label>
+               <input type="text" class="form-control"formControlName="Apellidos">
+              </div>
+              <div class="mb-3">
+                <label class="form-label">nie</label>
+                <input type="password" class="form-control" formControlName="nie">
+              <div class="mb-3">
+               <label class="form-label">Email</label>
+               <input type="text" class="form-control"formControlName="email">
+              </div>             
+              </div>
+              <div class="mb-3">
+                <label class="form-label">tlf</label>
+                <input type="text" class="form-control" formControlName="tlf">
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Tlf. Movil</label>
+                <input type="text" class="form-control" formControlName="tlfmovil">
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Localidad</label>
+                  <input type="text" class="form-control" formControlName="localidad">
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">direccion</label>
+                    <input type="text" class="form-control" formControlName="direccion">
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label">Distrito Postal</label>
+                      <input type="text" class="form-control" formControlName="cp">
+                      </div> 
+                     
+        </form>
+      </div>
+  </div>
+  
+ 
+
+
+
+
+
+
+
+
+
+
