@@ -15,14 +15,14 @@
    </div> 
 
        <div class="registro">
-        <form FormGroup = "registroForm" (ngSubmit)="registrarse()">
+        <form [formGroup] = "registroForm" (ngSubmit)="registrarse()">
             <div class="mb-3">
               <label class="form-label">Nombre</label>
               <input type="text" class="form-control"formControlName="nombre">
              </div>
              <div class="mb-3">
                <label class="form-label">Apellidos</label>
-               <input type="text" class="form-control"formControlName="Apellidos">
+               <input type="text" class="form-control"formControlName="apellidos">
               </div>
               <div class="mb-3">
                 <label class="form-label">nie</label>
@@ -52,10 +52,7 @@
                       <label class="form-label">Distrito Postal</label>
                       <input type="text" class="form-control" formControlName="cp">
                       </div>  
-                      <div class="mb-3">
-                        <label class="form-label">Borrar</label>
-                        <input type="checkbox" class="" formControlName="borrar">
-                        </div>      
+                      <button type="submit" value="guardar">GUARDAR</button>     
         </form>
       </div>
   </div>

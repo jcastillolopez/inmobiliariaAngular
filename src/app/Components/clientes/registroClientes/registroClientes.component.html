@@ -15,47 +15,48 @@
    </div> 
 
        <div class="registro">
-        <form FormGroup = "registroForm" (ngSubmit)="registrarse()">
-            <div class="mb-3">
+        <form [formGroup] = "registroForm" (ngSubmit)="registrarse()">
+            <div class="form-group">
               <label class="form-label">Nombre</label>
               <input type="text" class="form-control"formControlName="nombre">
              </div>
-             <div class="mb-3">
+             <div class="form-group">
                <label class="form-label">Apellidos</label>
-               <input type="text" class="form-control"formControlName="Apellidos">
+               <input type="text" class="form-control"formControlName="apellidos">
               </div>
-              <div class="mb-3">
-                <label class="form-label">nie</label>
-                <input type="password" class="form-control" formControlName="nie">
-              <div class="mb-3">
+              <div class="form-group">
+                <label class="form-label">Nie</label>
+                <input type="text" class="form-control" formControlName="nie">
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Fecha Nacimiento</label>
+                  <input type="date" class="form-control" formControlName="fecha_nacimiento">
+                  </div>
+              <div class="form-group">
                <label class="form-label">Email</label>
                <input type="text" class="form-control"formControlName="email">
-              </div>             
-              </div>
-              <div class="mb-3">
-                <label class="form-label">tlf</label>
+              </div>           
+              <div class="mform-group">
+                <label class="form-label">Tlf</label>
                 <input type="text" class="form-control" formControlName="tlf">
               </div>
-              <div class="mb-3">
+              <div class="form-group">
                 <label class="form-label">Tlf. Movil</label>
                 <input type="text" class="form-control" formControlName="tlfmovil">
                 </div>
-                <div class="mb-3">
+                <div class="form-group">
                   <label class="form-label">Localidad</label>
                   <input type="text" class="form-control" formControlName="localidad">
                   </div>
-                  <div class="mb-3">
+                  <div class="form-group">
                     <label class="form-label">direccion</label>
                     <input type="text" class="form-control" formControlName="direccion">
                     </div>
-                    <div class="mb-3">
+                    <div class="form-group">
                       <label class="form-label">Distrito Postal</label>
                       <input type="text" class="form-control" formControlName="cp">
-                      </div>  
-                      <div class="mb-3">
-                        <label class="form-label">Borrar</label>
-                        <input type="checkbox" class="" formControlName="borrar">
-                        </div>      
+                      </div> 
+                      <button type="submit" value="guardar">GUARDAR</button>                      
         </form>
       </div>
   </div>

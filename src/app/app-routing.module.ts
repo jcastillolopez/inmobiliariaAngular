@@ -6,10 +6,10 @@ import { RegistroInmuebleComponent } from './Components/inmuebles/registroInmueb
 import { ProveedoresComponent } from './Components/proveedores/proveedores.component';
 import { UsuariosComponent } from './Components/usuarios/usuarios.component';
 import { InicioComponent } from './Components/inicio/inicio.component';
-import { RegistroComponent } from './Components/usuarios/registro/registro.component';
 import { LoginComponent } from './Components/usuarios/login/login.component';
 import { RegistroClientesComponent } from './Components/clientes/registroClientes/registroClientes.component';
 import { RegistroProveedoresComponent } from './Components/proveedores/registroProveedores/registroProveedores.component';
+import { RegistroUsuariosComponent } from './Components/registroUsuarios/registroUsuarios.component';
 
 
 const routes: Routes = [
@@ -17,7 +17,7 @@ const routes: Routes = [
   { path: 'inicio', component: InicioComponent },
   { path: 'usuarios', component: UsuariosComponent }, 
   { path: 'usuarios/login', component: LoginComponent },
-  { path: 'usuarios/registro', component: RegistroComponent },
+  {path: 'usuarios/registro', component: RegistroUsuariosComponent},
   { path: 'clientes', component: ClientesComponent },
   { path: 'clientes/registro', component: RegistroClientesComponent},
   { path: 'proveedores', component: ProveedoresComponent },

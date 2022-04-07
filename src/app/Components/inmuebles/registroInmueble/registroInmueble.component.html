@@ -15,31 +15,15 @@
    </div> 
 
        <div class="registro">
-        <form FormGroup = "registroForm" (ngSubmit)="registrarse()">
+        <form [formGroup] = "registroForm" (ngSubmit)="registrarse()">
             <div class="mb-3">
-              <label class="form-label">Nombre</label>
-              <input type="text" class="form-control"formControlName="nombre">
+              <label class="form-label">Alias</label>
+              <input type="text" class="form-control"formControlName="alias">
              </div>
              <div class="mb-3">
-               <label class="form-label">Apellidos</label>
-               <input type="text" class="form-control"formControlName="Apellidos">
-              </div>
-              <div class="mb-3">
-                <label class="form-label">nie</label>
-                <input type="password" class="form-control" formControlName="nie">
-              <div class="mb-3">
-               <label class="form-label">Email</label>
-               <input type="text" class="form-control"formControlName="email">
-              </div>             
-              </div>
-              <div class="mb-3">
-                <label class="form-label">tlf</label>
-                <input type="text" class="form-control" formControlName="tlf">
-              </div>
-              <div class="mb-3">
-                <label class="form-label">Tlf. Movil</label>
-                <input type="text" class="form-control" formControlName="tlfmovil">
-                </div>
+               <label class="form-label">Ref_Catastral</label>
+               <input type="text" class="form-control"formControlName="refcatastral">
+              </div>           
                 <div class="mb-3">
                   <label class="form-label">Localidad</label>
                   <input type="text" class="form-control" formControlName="localidad">
@@ -52,7 +36,7 @@
                       <label class="form-label">Distrito Postal</label>
                       <input type="text" class="form-control" formControlName="cp">
                       </div> 
-                     
+                      <button type="submit" value="guardar">GUARDAR</button>  
         </form>
       </div>
   </div>

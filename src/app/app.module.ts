@@ -9,12 +9,12 @@ import { ProveedoresComponent } from './Components/proveedores/proveedores.compo
 import { InmueblesComponent } from './Components/inmuebles/inmuebles.component';
 import { UsuariosComponent } from './Components/usuarios/usuarios.component';
 import { ClientesComponent } from './Components/clientes/clientes.component';
-import { RegistroComponent } from './Components/usuarios/registro/registro.component';
 import { LoginComponent } from './Components/usuarios/login/login.component';
 import { RegistroClientesComponent } from './Components/clientes/registroClientes/registroClientes.component';
 import { RegistroProveedoresComponent } from './Components/proveedores/registroProveedores/registroProveedores.component';
 import { RegistroInmuebleComponent } from './Components/inmuebles/registroInmueble/registroInmueble.component';
 import { InicioComponent } from './Components/inicio/inicio.component';
+import { RegistroUsuariosComponent } from './Components/registroUsuarios/registroUsuarios.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +25,7 @@ import { InicioComponent } from './Components/inicio/inicio.component';
     RegistroInmuebleComponent,    
     UsuariosComponent,
     LoginComponent,
-    RegistroComponent,
+    RegistroUsuariosComponent,   
     ClientesComponent,
     RegistroClientesComponent  
   

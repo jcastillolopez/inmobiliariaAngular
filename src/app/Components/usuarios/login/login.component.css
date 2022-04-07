@@ -81,3 +81,18 @@
  span{
    color: blue;
 }
+.registro{
+   background-color: lightblue;
+   width:50%;
+   height: 50vh;
+   margin-left: 10%;
+   font-size: 125%;
+   border-radius: 10px;
+}
+form{
+   margin: 20px; 
+}
+input :last-child{
+   margin-bottom: 20px;
+   border-radius: 10px;
+}

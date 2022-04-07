@@ -6,7 +6,7 @@ import { firstValueFrom } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class ClientesService {
+export class loginService {
 
   constructor(private httpClient: HttpClient) {
 
@@ -14,6 +14,6 @@ export class ClientesService {
   
   create(formValue: any) {
     return firstValueFrom(
-    this.httpClient.post<any>('http://localhost:3000/api/clientes/registro', formValue)
+    this.httpClient.post<any>('http://localhost:3000/api/usuarios/login', formValue)
     )}
 }
