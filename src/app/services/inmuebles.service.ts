@@ -8,6 +8,11 @@ export class InmueblesService {
 
   constructor(private httpClient: HttpClient) {     
   }
+  getAll() {
+    return firstValueFrom(
+      this.httpClient.get<any>('http://localhost:3000/api/inmuebles')
+    );
+  }
   create(formValue: any) {
     return firstValueFrom(
     this.httpClient.post<any>('http://localhost:3000/api/inmuebles/registro', formValue)

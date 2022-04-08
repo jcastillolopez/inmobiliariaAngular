@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
-import { registroUsuariosService } from 'src/app/services/registroUsuarios.service';
+import { RegistroUsuariosService } from '../../../../services/registroUsuarios.service';
+
 @Component({
   selector: 'app-registroUsuarios',
   templateUrl: './registroUsuarios.component.html',
@@ -9,19 +10,19 @@ import { registroUsuariosService } from 'src/app/services/registroUsuarios.servi
 export class RegistroUsuariosComponent implements OnInit {
   registroForm: FormGroup;
   constructor(
-   private regitroUsuariosService:registroUsuariosService  ) {
+    private registroUsuariosService: RegistroUsuariosService) {
     this.registroForm = new FormGroup({
-      username: new FormControl(),      
+      username: new FormControl(),
       email: new FormControl(),
       password: new FormControl(),
-           
+
     });
-   }
+  }
 
   ngOnInit() {
   }
   async registrarse() {
-    const newUsuario = await this.regitroUsuariosService.create(this.registroForm.value);
+    const newUsuario = await this.registroUsuariosService.create(this.registroForm.value);
     console.log(newUsuario);
   }
 }

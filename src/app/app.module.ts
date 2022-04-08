@@ -14,7 +14,7 @@ import { RegistroClientesComponent } from './Components/clientes/registroCliente
 import { RegistroProveedoresComponent } from './Components/proveedores/registroProveedores/registroProveedores.component';
 import { RegistroInmuebleComponent } from './Components/inmuebles/registroInmueble/registroInmueble.component';
 import { InicioComponent } from './Components/inicio/inicio.component';
-import { RegistroUsuariosComponent } from './Components/registroUsuarios/registroUsuarios.component';
+import { RegistroUsuariosComponent } from './Components/usuarios/login/registroUsuarios/registroUsuarios.component';
 @NgModule({
   declarations: [
     AppComponent,

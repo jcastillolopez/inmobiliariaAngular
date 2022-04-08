@@ -1,6 +1,8 @@
-export interface usuarioInterface{
+export interface usuarioInterface {
+    id?: number,
     username?: string;
     email: string;
     password: string;
-    roles_id?: number;
+
+    rol?: string;
 }

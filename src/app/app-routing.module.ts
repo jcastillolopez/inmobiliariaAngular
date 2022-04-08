@@ -9,7 +9,7 @@ import { InicioComponent } from './Components/inicio/inicio.component';
 import { LoginComponent } from './Components/usuarios/login/login.component';
 import { RegistroClientesComponent } from './Components/clientes/registroClientes/registroClientes.component';
 import { RegistroProveedoresComponent } from './Components/proveedores/registroProveedores/registroProveedores.component';
-import { RegistroUsuariosComponent } from './Components/registroUsuarios/registroUsuarios.component';
+import { RegistroUsuariosComponent } from './Components/usuarios/login/registroUsuarios/registroUsuarios.component';
 
 
 const routes: Routes = [
@@ -23,7 +23,8 @@ const routes: Routes = [
   { path: 'proveedores', component: ProveedoresComponent },
   {path: 'proveedores/registro', component: RegistroProveedoresComponent},
   { path: 'inmuebles', component: InmueblesComponent },
-  {path: 'inmuebles/registro', component:RegistroInmuebleComponent},  
+  { path: 'inmuebles/registro', component: RegistroInmuebleComponent },
+  
   { path: '**', pathMatch: 'full', redirectTo: '/inicio' },
 ];
 

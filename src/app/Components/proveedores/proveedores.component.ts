@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProveedoresService } from 'src/app/services/proveedores.service';
 
 @Component({
   selector: 'app-proveedores',
@@ -6,12 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./proveedores.component.css']
 })
 export class ProveedoresComponent implements OnInit {
-  
-  constructor() {
-  
+  arrListaProveedores: any[];
+  constructor(
+    private proveedoresService: ProveedoresService) { 
+    this.arrListaProveedores = [];
    }
-
-  ngOnInit(): void {
-  }
+   async ngOnInit() {
+    this.arrListaProveedores = await this.proveedoresService.getAll();
+};
 
 }

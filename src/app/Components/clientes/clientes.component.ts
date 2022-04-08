@@ -1,15 +1,21 @@
 import { Component, OnInit } from '@angular/core';
-
+import { ClientesService } from 'src/app/services/clientes.service';
 @Component({
   selector: 'app-clientes',
   templateUrl: './clientes.component.html',
   styleUrls: ['./clientes.component.css']
 })
 export class ClientesComponent implements OnInit {
+  arrListaClientes:any[];
 
-  constructor() { }
+  constructor(
+    private clientesService: ClientesService) { 
+    this.arrListaClientes = [];
+    }
 
-  ngOnInit(): void {
-  }
+  async ngOnInit() {
+      this.arrListaClientes = await this.clientesService.getAll();
+  
+  };
 
 }

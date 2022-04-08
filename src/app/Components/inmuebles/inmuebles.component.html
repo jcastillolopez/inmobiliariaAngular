@@ -13,4 +13,13 @@
             </ul>
           </div>
      </div> 
+     <div class="listado">
+     <div class="lista" *ngFor="let cliente of arrListaInmuebles">
+      <h3>ID:{{cliente.id}}  {{cliente.alias}}</h3>
+      <p>{{cliente.refcatastral}}</p>
+      <p>{{cliente.localidad}}</p>
+      <p>{{cliente.direccion}}</p>
+      <p>{{cliente.cp}}</p>
+   </div>
+  </div>
     </div>

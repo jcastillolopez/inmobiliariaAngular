@@ -4,19 +4,18 @@ import { firstValueFrom } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class RegistroUsuariosService {
+export class TiposService {
 
   constructor(private httpClient: HttpClient) {
 
   }
-  getAll() { 
-     
+  getAll() {    
     return firstValueFrom(
-     this.httpClient.get<any>('http://localhost:3000/api/usuarios')
+     this.httpClient.get<any>('http://localhost:3000/api/tipos')
      );  
    }
   create(formValue: any) {
     return firstValueFrom(
-    this.httpClient.post<any>('http://localhost:3000/api/usuarios/registro', formValue)
+    this.httpClient.post<any>('http://localhost:3000/api/tipos', formValue)
     )}
 }

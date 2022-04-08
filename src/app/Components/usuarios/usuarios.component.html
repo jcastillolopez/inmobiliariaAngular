@@ -1,17 +1,26 @@
-
-<div class="container">         
-        <div class="nav-tab">
-            <div class="titulo">
-                <h2>USUARIOS</h2> 
-                <p>Bienvenido a la app para poder utilizarla debe registrarse. Si ya lo esta introzuca su login</p>             
+<div class="container">
+    <div class="nav-tab">
+        <div class="titulo">
+            <h2>USUARIOS</h2>
+            <p>Bienvenido a la app para poder utilizarla debe registrarse. Si ya lo esta introzuca
+                su login</p>
             <ul>
                 <li [routerLink]="['/usuarios/login']" routerLinkActive="activo">
-                  Login
+                    Login
                 </li>
                 <li [routerLink]="['/usuarios/registro']" routerLinkActive="activo">
                     Registro
                 </li>
             </ul>
-        </div> 
         </div>
     </div>
+    <div class="listado">
+        <div class="lista" *ngFor="let usuario of arrListaUsuarios">
+            <h3>ID:{{usuario.id}}</h3>
+            <p>{{usuario.username}}</p>
+            <p>{{usuario.email}}}</p>
+            <p>{{usuario.password}}</p>
+            <p>{{usuario.rol}}</p>
+        </div>
+    </div>
+</div>
