@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { ClientesService } from 'src/app/services/clientes.service';
+import { clienteInterface } from 'src/app/interfaces/cliente_interface';
 @Component({
   selector: 'app-clientes',
   templateUrl: './clientes.component.html',
   styleUrls: ['./clientes.component.css']
 })
 export class ClientesComponent implements OnInit {
-  arrListaClientes:any[];
+  arrListaClientes:clienteInterface[];
 
   constructor(
     private clientesService: ClientesService) { 
@@ -14,8 +15,7 @@ export class ClientesComponent implements OnInit {
     }
 
   async ngOnInit() {
-      this.arrListaClientes = await this.clientesService.getAll();
-  
+      this.arrListaClientes = await this.clientesService.getAll();  
   };
 
 }

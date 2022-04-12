@@ -1,6 +1,34 @@
-<div class="titulo">
-    <h1>APP GESTION DE INMUEBLES</h1>
-</div>
+<header>
+  <h1>APP GESTION DE INMUEBLES</h1>
+</header>
 
-
-<router-outlet></router-outlet>
+<main>
+  <nav>
+    <ul>
+      <li [routerLink]="['/usuarios']" routerLinkActive="activo">
+        Usuarios
+      </li>
+      <li [routerLink]="['/clientes']" routerLinkActive="activo">
+        Clientes
+      </li>
+      <li [routerLink]="['inmuebles']" routerLinkActive="activo">
+        Inmuebles
+      </li>
+      <li [routerLink]="['contratos']" routerLinkActive="activo">
+        Contratos
+      </li>
+      <li [routerLink]="['/balance']" routerLinkActive="activo">
+        Balance
+      </li>
+      <li [routerLink]="['/proveedores']" routerLinkActive="activo">
+        Proveedores
+      </li>
+      <li [routerLink]="['/tipos']" routerLinkActive="activo">
+        Tipos</li>
+    </ul>
+  </nav>
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+</main>
+<footer></footer>

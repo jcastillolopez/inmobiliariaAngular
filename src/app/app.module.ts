@@ -15,6 +15,10 @@ import { RegistroProveedoresComponent } from './Components/proveedores/registroP
 import { RegistroInmuebleComponent } from './Components/inmuebles/registroInmueble/registroInmueble.component';
 import { InicioComponent } from './Components/inicio/inicio.component';
 import { RegistroUsuariosComponent } from './Components/usuarios/login/registroUsuarios/registroUsuarios.component';
+import { TiposComponent } from './Components/tipos/tipos.component';
+import { BalanceComponent } from './Components/balance/balance.component';
+import { ContratosComponent } from './Components/contratos/contratos.component';
+import { DetalleClienteComponent } from './Components/clientes/detalleCliente/detalleCliente.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +31,11 @@ import { RegistroUsuariosComponent } from './Components/usuarios/login/registroU
     LoginComponent,
     RegistroUsuariosComponent,   
     ClientesComponent,
-    RegistroClientesComponent  
+    RegistroClientesComponent,
+    TiposComponent,
+    BalanceComponent,
+    ContratosComponent,
+    DetalleClienteComponent
   
   ],
   imports: [

@@ -1,18 +1,13 @@
-<div class="container">
-    <div class="nav-tab">
-      <div class="titulo">
-          <h2>PROVEEDORES</h2> 
-          <p>Por favor introduzca los datos en el registro</p>             
-            <ul>
-              <li [routerLink]="['/proveedores']" routerLinkActive="activo">
-               Proveedores
-              </li>
-              <li [routerLink]="['/proveedores/registro']" routerLinkActive="activo">
-                 Registro de proveedores
-              </li>
-            </ul>
-          </div>
-     </div> 
+<div class="wrapper">
+  <header>    
+      <h3>Proveedores:</h3>     
+      <ul>       
+        <li [routerLink]="['/proveedores/registro']" routerLinkActive="activo">
+          Nuevo Proveedor
+        </li>
+      </ul>
+   
+  
      <div class="listado">
       <div class="lista" *ngFor="let proveedor of arrListaProveedores">
          <h3>ID:{{proveedor.id}}{{proveedor.nie}}</h3>

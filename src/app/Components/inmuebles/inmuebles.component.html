@@ -1,18 +1,13 @@
-<div class="container">
-    <div class="nav-tab">
-      <div class="titulo">
-          <h2>INMUEBLES</h2> 
-          <p>Por favor introduzca los datos en el registro</p>             
-            <ul>
-              <li [routerLink]="['/inmuebles']" routerLinkActive="activo">
-               Inmuebles
-              </li>
-              <li [routerLink]="['/inmuebles/registro']" routerLinkActive="activo">
-                 Registro de Inmuebles
-              </li>
-            </ul>
-          </div>
-     </div> 
+<div class="wrapper">
+  <header>    
+      <h3>Inmuebles:</h3>     
+      <ul>       
+        <li [routerLink]="['/inmuebles/registro']" routerLinkActive="activo">
+          Nuevo Inmueble
+        </li>
+      </ul>
+   
+  </header>
      <div class="listado">
      <div class="lista" *ngFor="let cliente of arrListaInmuebles">
       <h3>ID:{{cliente.id}}  {{cliente.alias}}</h3>

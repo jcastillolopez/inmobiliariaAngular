@@ -1,101 +1,41 @@
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
 }
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.wrapper{
+   display: grid;
+   grid-template-columns: 1fr 3fr;     
+   height: 85vh; 
+   background-color:rgb(209, 220, 220);
+   color: black;
+   padding: 5px;
 }
-.container{
-   margin: 0 auto;
+header{ 
+   height:10vh ;
+   background-color:rgb(187, 185, 185);    
+   display: grid; 
+   grid-column: 1/5;  
+   grid-template-columns: 1fr,3fr;    
+   }
+   main{
+      display: grid;
+      grid-template-columns: repeat(8,1fr);
+      grid-row: 1fr 1fr; 
+      height: 85vh;  
+  }
+ul{  
+  grid-column: 2/3;   
 }
-
-.titulo{
-    width: 90%;
-    height: 15vh;
-    margin: 20px;  
-    background-color: rgb(159, 159, 163);
-    color: white;
-    flex-wrap: wrap;
-   justify-content: center;
-   align-items: center;
-   text-align: center;
-  
- }
- h1{
-    width: 100%;
- }
- 
-  ul{
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    color: black;
-    
- }
- 
- ul li{
-   
-   height: 40px;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   background-color: lightcyan;
-   border: 1px solid dodgerblue;
-   transition: .2s;
-   cursor: pointer;
-   font-family: Lato;
-   padding: 5PX;
-}
- 
- ul li:hover{
-    background-color: dodgerblue;
-    color: white;
- }
- 
- ul li a{
-   
-    text-decoration: none;
- }
- 
- ul li.activo{
-    background-color: dodgerblue;
-    border: 1px solid dodgerblue;
-    color: white;
- }
- 
- ul li:first-child{
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
- }
- 
- ul li:last-child{
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
- }
- h2{
-    margin-left: 5%;
- }
- h3{
-    margin-left: 10%;
- }
- span{
-   color: blue;
-}
-.registro{
-   background-color: lightblue;
-   width:50%;
-   height: 90vh;
-   margin-left: 10%;
-   font-size: 125%;
-   border-radius: 10px;
-}
-form{
-   margin:  0px 20px; 
-}
-input :last-child {
-   margin-bottom: 20px;
-   border-radius: 10px;
-}
+li{ 
+   list-style: none;
+   grid-row: 1fr;   
+   border: 1px solid black;
+   border-radius: 5px;     
+   }
+   li:hover{
+       background-color: lightblue;
+   }
+  ul li.activo{
+       background-color:dodgerblue ;
+   }

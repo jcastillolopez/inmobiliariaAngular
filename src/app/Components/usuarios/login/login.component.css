@@ -8,7 +8,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 .titulo{
     width: 90%;
     height: 15vh;
@@ -18,23 +17,18 @@
     flex-wrap: wrap;
    justify-content: center;
    align-items: center;
-   text-align: center;
-  
+   text-align: center;  
  }
  h1{
     width: 100%;
- }
- 
+ } 
   ul{
     list-style: none;
     display: flex;
     flex-wrap: wrap;
-    color: black;
-    
- }
- 
- ul li{
-   
+    color: black;    
+ } 
+ ul li{   
    height: 40px;
    display: flex;
    justify-content: center;
@@ -45,24 +39,19 @@
    cursor: pointer;
    font-family: Lato;
    padding: 5PX;
-}
- 
+} 
  ul li:hover{
     background-color: dodgerblue;
     color: white;
- }
- 
- ul li a{
-   
+ } 
+ ul li a{   
     text-decoration: none;
- }
- 
+ } 
  ul li.activo{
     background-color: dodgerblue;
     border: 1px solid dodgerblue;
     color: white;
- }
- 
+ } 
  ul li:first-child{
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;

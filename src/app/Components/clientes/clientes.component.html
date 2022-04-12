@@ -1,25 +1,23 @@
-<div class="container">
-  <div class="nav-tab">
-    <div class="titulo">
-      <h2>CLIENTES</h2>
-      <p>Por favor introduzca sus datos en el registro</p>
-      <ul>
-        <li [routerLink]="['/clientes']" routerLinkActive="activo">
-          Clientes
-        </li>
-        <li [routerLink]="['/clientes/registro']" routerLinkActive="activo">
-          Registro de clientes
-        </li>
-      </ul>
-    </div>
-  </div>
+<div class="wrapper">
+<header>
+<h2> Estos son sus Clientes:</h2>
+<p>Para actuar sobre uno pulse sobre el</p>
+<ul>
+  <li [routerLink]="['/clientes/registro']" routerLinkActive="activo">
+    Nuevo Cliente </li>
+</ul>
+</header>
+  <main>
   <div class="listado">
-    <div class="lista" *ngFor="let cliente of arrListaClientes">
-       <h3>ID:{{cliente.id}}{{cliente.nie}}</h3>
-       <h3>{{cliente.nombre}}{{cliente.apellidos}}</h3>
-    </div>
+    <ul class="lista" *ngFor="let cliente of arrListaClientes">
+      <div [routerLink]="['/clientes/'+cliente.id]" routerLinkActive="activo" class="campo">
+       <h4>* {{cliente.nie}}</h4> 
+       <h5> {{cliente.nombre}} {{cliente.apellidos}}</h5>       
+        </div>     
+    </ul>
   </div>
-
-
-
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+</main>
 </div>
