@@ -1,20 +1,23 @@
 <div class="wrapper">
-  <header>    
-      <h3>Inmuebles:</h3>     
-      <ul>       
-        <li [routerLink]="['/inmuebles/registro']" routerLinkActive="activo">
-          Nuevo Inmueble
-        </li>
-      </ul>
-   
+  <header>
+  <h2> Estos son sus Inmuebles:</h2>
+  <p>Para actuar sobre uno pulse sobre el</p>
+  <ul>
+    <li [routerLink]="['/inmuebles/registro']" routerLinkActive="activo">
+      Nuevo Inmueble </li>
+  </ul>
   </header>
-     <div class="listado">
-     <div class="lista" *ngFor="let cliente of arrListaInmuebles">
-      <h3>ID:{{cliente.id}}  {{cliente.alias}}</h3>
-      <p>{{cliente.refcatastral}}</p>
-      <p>{{cliente.localidad}}</p>
-      <p>{{cliente.direccion}}</p>
-      <p>{{cliente.cp}}</p>
-   </div>
-  </div>
+    <main>
+    <div class="listado">
+      <ul class="lista" *ngFor="let cliente of arrListaInmuebles">
+        <div [routerLink]="['/inmuebles/'+cliente.id]" routerLinkActive="activo" class="campo">
+         <h6>* {{cliente.refcatastral}}  </h6> 
+         <h5>   {{cliente.alias}}</h5>       
+          </div>     
+      </ul>
     </div>
+    <div class="container">
+      <router-outlet></router-outlet>
+    </div>
+  </main>
+  </div>

@@ -1,5 +1,5 @@
 export interface tipoInterface {
-    id?: number,
+    id: number,
     name: string
 
 }

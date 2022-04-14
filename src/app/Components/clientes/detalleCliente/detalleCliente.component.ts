@@ -3,7 +3,6 @@ import { ClientesService } from 'src/app/services/clientes.service';
 import { clienteInterface } from 'src/app/interfaces/cliente_interface';
 import { ActivatedRoute } from '@angular/router';
 
-
 @Component({
   selector: 'app-detalleCliente',
   templateUrl: './detalleCliente.component.html',
@@ -30,7 +29,9 @@ export class DetalleClienteComponent implements OnInit {
       localidad: "",
       direccion: "",
       cp: "",
-      borrado: false
+      borrado: false,
+      id: 0,
+     
     }
   }
 
@@ -40,7 +41,6 @@ export class DetalleClienteComponent implements OnInit {
       this.cliente = response[0]
 
     })
-
   }
-
+  
 }

@@ -1,0 +1,20 @@
+<div class="lista">
+<div class="campo">
+  <label> Tipo Contrato:</label>
+  <p>{{contrato.tipo_contrato}}</p>
+  </div>
+<div class="campo">
+  <label>Inmueble:</label>
+  <p>{{contrato.alias}}</p>
+</div>
+<div class="campo">
+  <label>Valor de Contrato:</label>
+ <p>{{contrato.valor_contrato}}</p>
+</div>
+<div class="campo">
+  <label> Fecha Contrato:</label>
+ <p>{{contrato.fecha_contrato|date}}</p>
+</div>
+
+<button [routerLink]="['/contratos/modificar/'+contrato.id]"routerLinkActive="activo">Modificar Contrato</button>
+</div>

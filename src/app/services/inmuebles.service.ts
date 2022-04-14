@@ -6,7 +6,7 @@ import { firstValueFrom } from 'rxjs';
 })
 export class InmueblesService {
 
-  constructor(private httpClient: HttpClient) {     
+  constructor(private httpClient: HttpClient) {
   }
   getAll() {
     return firstValueFrom(
@@ -15,6 +15,15 @@ export class InmueblesService {
   }
   create(formValue: any) {
     return firstValueFrom(
-    this.httpClient.post<any>('http://localhost:3000/api/inmuebles/registro', formValue)
-    )}
+      this.httpClient.post<any>('http://localhost:3000/api/inmuebles/registro', formValue)
+    )
+  }
+  update(formValue: any) {
+    return firstValueFrom(
+      this.httpClient.put<any>('http://localhost:3000/api/inmuebles/' + formValue.id, formValue)
+    )
+  }
+  getById(pid: number) {   
+    return firstValueFrom(this.httpClient.get<any>(`http://localhost:3000/api/inmuebles/${pid}`))
+  }
 }

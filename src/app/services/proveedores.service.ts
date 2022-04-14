@@ -16,5 +16,14 @@ export class ProveedoresService {
   create(formValue: any) {
     return firstValueFrom(
     this.httpClient.post<any>('http://localhost:3000/api/proveedores/registro', formValue)
-    )}
+    )
+  }
+  update(formValue: any) {    
+    return firstValueFrom(
+      this.httpClient.put<any>('http://localhost:3000/api/proveedores/'+ formValue.id, formValue)     
+    )    
+  }
+  getById(pid: number) {
+    return firstValueFrom(this.httpClient.get<any>(`http://localhost:3000/api/proveedores/${pid}`))
+  }
 }

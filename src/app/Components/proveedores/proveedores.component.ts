@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProveedoresService } from 'src/app/services/proveedores.service';
+import { proveedorInterface } from 'src/app/interfaces/proveedores.interface';
 
 @Component({
   selector: 'app-proveedores',
@@ -7,7 +8,7 @@ import { ProveedoresService } from 'src/app/services/proveedores.service';
   styleUrls: ['./proveedores.component.css']
 })
 export class ProveedoresComponent implements OnInit {
-  arrListaProveedores: any[];
+  arrListaProveedores: proveedorInterface[];
   constructor(
     private proveedoresService: ProveedoresService) { 
     this.arrListaProveedores = [];

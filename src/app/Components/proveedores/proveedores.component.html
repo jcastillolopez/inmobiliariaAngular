@@ -1,16 +1,24 @@
 <div class="wrapper">
   <header>    
-      <h3>Proveedores:</h3>     
+      <h2>Estos son sus Proveedores:</h2> 
+      <p>Para actuar sobre uno pulse sobre el:</p> 
       <ul>       
         <li [routerLink]="['/proveedores/registro']" routerLinkActive="activo">
           Nuevo Proveedor
         </li>
       </ul>
-   
-  
-     <div class="listado">
-      <div class="lista" *ngFor="let proveedor of arrListaProveedores">
-         <h3>ID:{{proveedor.id}}{{proveedor.nie}}</h3>
-         <h3>{{proveedor.nombre}}{{proveedor.apellidos}}</h3>
-      </div>
+    </header>
+    <main>
+    <div class="listado">
+      <ul class="lista" *ngFor="let proveedor of arrListaProveedores">
+        <div [routerLink]="['/proveedores/'+proveedor.id]" routerLinkActive="activo" class="campo">
+         <h6>* {{proveedor.nie}}</h6> 
+         <h5> {{proveedor.nombre}} {{proveedor.apellidos}}</h5>       
+          </div>     
+      </ul>
     </div>
+    <div class="container">
+      <router-outlet></router-outlet>
+    </div>
+  </main>
+  </div>

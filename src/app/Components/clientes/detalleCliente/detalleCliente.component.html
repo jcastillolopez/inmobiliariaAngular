@@ -1,39 +1,41 @@
-
+<div class="lista">
 <div class="campo">
     <label> Nombre:</label>
-    <input placeholder={{cliente.nombre}} />
+    <p>{{cliente.nombre}}</p>
 </div>
 <div class="campo">
     <label> Apellidos:</label>
-    <input placeholder={{cliente.apellidos}} />
+   <p>{{cliente.apellidos}}</p>
 </div>
 <div class="campo">
-    <label>NIE:</label>
-    <input placeholder={{cliente.nie}} />
+    <label>DNI/NIF:</label>
+   <p>{{cliente.nie}}</p>
 </div>
 <div class="campo">
     <label> Fecha Nacimiento:</label>
-    <input placeholder={{cliente.fecha_nacimiento}} />
+   <p>{{cliente.fecha_nacimiento|date}}</p>
 </div>
 <div class="campo">
     <label> Email:</label>
-    <input placeholder={{cliente.email}} />
+   <p>{{cliente.email}}</p>
 </div><div class="campo">
     <label> Tlf:</label>
-    <input placeholder={{cliente.tlf}} />
+   <p>{{cliente.tlf}}</p>
 </div>
 <div class="campo">
     <label> Tlf Movil:</label>
-    <input placeholder={{cliente.tlf_movil}} />
+    <p>{{cliente.tlf_movil}}</p>
 </div>
 <div class="campo">
     <label> Localidad:</label>
-    <input placeholder={{cliente.localidad}} />
+   <p>{{cliente.localidad}}</p>
 </div>
 <div class="campo">
     <label> Direccion:</label>
-    <input placeholder={{cliente.direccion}} />
+   <p>{{cliente.direccion}}</p>
 </div><div class="campo">
     <label> Codigo Postal:</label>
-    <input placeholder={{cliente.cp}} />
+    <p> {{cliente.cp}}</p>
+</div>
+<button [routerLink]="['/clientes/modificar/'+cliente.id]"routerLinkActive="activo">Modificar Cliente</button>
 </div>

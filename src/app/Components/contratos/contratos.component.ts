@@ -1,15 +1,28 @@
 import { Component, OnInit } from '@angular/core';
-
+import { contratoInterface } from 'src/app/interfaces/contratos.interface';
+import { ContratosService } from 'src/app/services/contratos.service';
 @Component({
   selector: 'app-contratos',
   templateUrl: './contratos.component.html',
   styleUrls: ['./contratos.component.css']
 })
 export class ContratosComponent implements OnInit {
+  arrListaContratos: contratoInterface[];
+  
+ 
 
-  constructor() { }
+  constructor(
+    private contratosService: ContratosService) { 
+    this.arrListaContratos = [];
+   
+   
+    }
 
-  ngOnInit() {
-  }
+  async ngOnInit() {   
+    this.arrListaContratos = await this.contratosService.getAll(); 
+    console.log(this.arrListaContratos);
+   
+   
+   }
 
 }

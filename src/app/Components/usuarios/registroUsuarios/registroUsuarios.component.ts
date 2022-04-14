@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
-import { RegistroUsuariosService } from '../../../../services/registroUsuarios.service';
+import { RegistroUsuariosService } from '../../../services/registroUsuarios.service';
 
 @Component({
   selector: 'app-registroUsuarios',

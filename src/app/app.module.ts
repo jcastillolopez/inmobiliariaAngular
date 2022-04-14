@@ -14,11 +14,15 @@ import { RegistroClientesComponent } from './Components/clientes/registroCliente
 import { RegistroProveedoresComponent } from './Components/proveedores/registroProveedores/registroProveedores.component';
 import { RegistroInmuebleComponent } from './Components/inmuebles/registroInmueble/registroInmueble.component';
 import { InicioComponent } from './Components/inicio/inicio.component';
-import { RegistroUsuariosComponent } from './Components/usuarios/login/registroUsuarios/registroUsuarios.component';
+import { RegistroUsuariosComponent } from './Components/usuarios/registroUsuarios/registroUsuarios.component';
 import { TiposComponent } from './Components/tipos/tipos.component';
 import { BalanceComponent } from './Components/balance/balance.component';
 import { ContratosComponent } from './Components/contratos/contratos.component';
 import { DetalleClienteComponent } from './Components/clientes/detalleCliente/detalleCliente.component';
+import { DetalleInmuebleComponent } from './Components/inmuebles/detalleInmueble/detalleInmueble.component';
+import { DetalleProveedorComponent } from './Components/proveedores/detalleProveedor/detalleProveedor.component';
+import { DetalleContratoComponent } from './Components/contratos/detalleContrato/detalleContrato.component';
+import { RegistroContratosComponent } from './Components/contratos/registroContratos/registroContratos.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +39,12 @@ import { DetalleClienteComponent } from './Components/clientes/detalleCliente/de
     TiposComponent,
     BalanceComponent,
     ContratosComponent,
-    DetalleClienteComponent
+    DetalleClienteComponent,
+    DetalleInmuebleComponent,
+    DetalleProveedorComponent,
+    DetalleContratoComponent,
+    RegistroContratosComponent
+    
   
   ],
   imports: [

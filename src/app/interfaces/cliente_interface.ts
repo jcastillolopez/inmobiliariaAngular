@@ -1,6 +1,6 @@
 
 export interface clienteInterface {
-    id?: number,
+    id: number,
     nombre: string,
     apellidos: string,
     fecha_nacimiento: Date,
@@ -12,6 +12,7 @@ export interface clienteInterface {
     direccion: string,
     cp: string,
     usuario_id?: number,
-    borrado: boolean
-
+    borrado: boolean,
+    create_time?: Date,
+    update_time?:Date,
 }

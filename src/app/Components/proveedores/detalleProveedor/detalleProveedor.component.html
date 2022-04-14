@@ -1,0 +1,37 @@
+<div class="lista">
+<div class="campo">
+  <label> Nombre:</label>
+  <p>{{proveedor.nombre}}</p>
+</div>
+<div class="campo">
+  <label> Apellidos:</label>
+ <p>{{proveedor.apellidos}}</p>
+</div>
+<div class="campo">
+  <label>DNI/NIF:</label>
+ <p>{{proveedor.nie}}</p>
+</div>
+<div class="campo">
+  <label> Email:</label>
+ <p>{{proveedor.email}}</p>
+</div><div class="campo">
+  <label> Tlf:</label>
+ <p>{{proveedor.tlf}}</p>
+</div>
+<div class="campo">
+  <label> Tlf Movil:</label>
+  <p>{{proveedor.tlf_movil}}</p>
+</div>
+<div class="campo">
+  <label> Localidad:</label>
+ <p>{{proveedor.localidad}}</p>
+</div>
+<div class="campo">
+  <label> Direccion:</label>
+ <p>{{proveedor.direccion}}</p>
+</div><div class="campo">
+  <label> Codigo Postal:</label>
+  <p> {{proveedor.cp}}</p>
+</div>
+<button [routerLink]="['/proveedores/modificar/'+proveedor.id]"routerLinkActive="activo">Modificar Proveedor</button>
+</div>

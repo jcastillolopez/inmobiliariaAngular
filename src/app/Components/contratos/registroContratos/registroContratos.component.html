@@ -1,0 +1,39 @@
+<header>
+  <h3>Contratos:</h3>
+  <ul>
+    <li [routerLink]="['/contratos/registro']" routerLinkActive="activo">
+      Nuevo contrato
+    </li>
+  </ul>
+</header>
+<div class="formulario">  
+  <form class="registro" [formGroup]="registroForm" (ngSubmit)="enviar()">
+    <div class="form-group campo">
+      <label class="form-label">Tipo de Contrato</label>
+    <select type="text" formControlName="tipos_contratos_id">
+      <option [value]="tipo.id" *ngFor="let tipo of selectTipoContrato">{{tipo.tipo_contrato}} </option>
+    </select>
+    </div>
+    <div class="form-group campo">
+      <label class="form-label">Inmueble</label>
+    <select type="text" formControlName="inmuebles_id">
+      <option [value]="inmueble.id" *ngFor="let inmueble of selectInmueble">{{inmueble.refcatastral}}    {{inmueble.alias}}</option>
+    </select>
+    </div>
+    <div class="form-group campo">
+      <label class="form-label">Fecha Contrato </label>
+      <input type="date" class="form-control" formControlName="fecha_contrato">
+    </div> 
+    <div class="form-group campo">
+      <label class="form-label">Valor Contrato </label>
+      <input type="text" class="form-control" formControlName="valor_contrato">
+    </div>      
+    <div class="form-group campo">
+      <label class="form-label">Eliminar Contrato</label>
+      <input type="checkbox" formControlName="borrado" >
+    </div>
+    <button type="submit" value="guardar">Guardar</button>
+  </form>
+</div>
+   
+

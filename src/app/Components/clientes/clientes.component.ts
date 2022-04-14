@@ -17,5 +17,5 @@ export class ClientesComponent implements OnInit {
   async ngOnInit() {
       this.arrListaClientes = await this.clientesService.getAll();  
   };
-
+ 
 }

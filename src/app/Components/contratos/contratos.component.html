@@ -1,10 +1,24 @@
 <div class="wrapper">
-  <header>    
-      <h3>Contratos:</h3>     
-      <ul>       
-        <li [routerLink]="['/contratos/registro']" routerLinkActive="activo">
-          Nuevo Contrato
-        </li>
-      </ul>
-   
+  <header>
+    <h3>Contratos:</h3>
+    <ul>
+      <li [routerLink]="['/contratos/registro']" routerLinkActive="activo">
+        Nuevo Contrato
+      </li>
+    </ul>
   </header>
+
+  <main>
+    <div class="listado">
+      <ul class="lista" *ngFor="let contrato of arrListaContratos">
+        <div [routerLink]="['/contratos/'+contrato.id]" routerLinkActive="activo" class="campo">
+          <h5>*{{contrato.alias}} : {{contrato.tipo_contrato}}, {{contrato.fecha_contrato|date}}
+          </h5>
+        </div>
+      </ul>
+    </div>
+    <div class="container">
+      <router-outlet></router-outlet>
+    </div>
+  </main>
+</div>

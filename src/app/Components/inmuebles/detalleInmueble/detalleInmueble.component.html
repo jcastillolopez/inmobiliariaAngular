@@ -1,0 +1,21 @@
+<div class="lista"></div>
+<div class="campo">
+  <label> Nombre:</label>
+  <p>{{inmueble.alias}}</p>
+</div>
+<div class="campo">
+  <label>refcatastral:</label>
+ <p>{{inmueble.refcatastral}}</p>
+</div>
+<div class="campo">
+  <label> Localidad:</label>
+ <p>{{inmueble.localidad}}</p>
+</div>
+<div class="campo">
+  <label> Direccion:</label>
+ <p>{{inmueble.direccion}}</p>
+</div><div class="campo">
+  <label> Codigo Postal:</label>
+  <p> {{inmueble.cp}}</p>
+</div>
+<button [routerLink]="['/inmuebles/modificar/'+inmueble.id]"routerLinkActive="activo">Modificar Inmueble</button>

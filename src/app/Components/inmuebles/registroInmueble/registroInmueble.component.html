@@ -1,54 +1,37 @@
-<div class="container">
-  <div class="nav-tab">
-    <div class="titulo">
-        <h2>INMUEBLES</h2> 
-        <p>Por favor introduzca los datos en el registro</p>             
-          <ul>
-            <li [routerLink]="['/inmuebles']" routerLinkActive="activo">
-              inmuebles
-            </li>
-            <li [routerLink]="['/inmuebles/registro']" routerLinkActive="activo">
-               Registro de Inmuebles
-            </li>
-          </ul>
-        </div>
-   </div> 
-
-       <div class="registro">
-        <form [formGroup] = "registroForm" (ngSubmit)="registrarse()">
-            <div class="mb-3">
-              <label class="form-label">Alias</label>
-              <input type="text" class="form-control"formControlName="alias">
-             </div>
-             <div class="mb-3">
-               <label class="form-label">Ref_Catastral</label>
-               <input type="text" class="form-control"formControlName="refcatastral">
-              </div>           
-                <div class="mb-3">
-                  <label class="form-label">Localidad</label>
-                  <input type="text" class="form-control" formControlName="localidad">
-                  </div>
-                  <div class="mb-3">
-                    <label class="form-label">direccion</label>
-                    <input type="text" class="form-control" formControlName="direccion">
-                    </div>
-                    <div class="mb-3">
-                      <label class="form-label">Distrito Postal</label>
-                      <input type="text" class="form-control" formControlName="cp">
-                      </div> 
-                      <button type="submit" value="guardar">GUARDAR</button>  
-        </form>
-      </div>
-  </div>
-  
- 
-
-
-
-
-
-
-
-
-
-
+<header>
+  <h3>Inmuebles:</h3>
+  <ul>
+    <li [routerLink]="['/inmuebles/registro']" routerLinkActive="activo">
+      Nuevo Inmueble
+    </li>
+  </ul>
+</header>
+<div class="formulario">
+  <form class="registro" [formGroup]="registroForm" (ngSubmit)="enviar()">
+    <div class="form-group campo">
+      <label class="form-label">Alias</label>
+      <input type="text" class="form-control" formControlName="alias">
+    </div>    
+    <div class="form-group campo">
+      <label class="form-label">refCatastral</label>
+      <input type="text" class="form-control" formControlName="refcatastral">
+    </div>   
+    <div class="form-group campo">
+      <label class="form-label">Localidad</label>
+      <input type="text" class="form-control" formControlName="localidad">
+    </div>
+    <div class="form-group campo">
+      <label class="form-label">Direccion</label>
+      <input type="text" class="form-control" formControlName="direccion">
+    </div>
+    <div class="form-group campo">
+      <label class="form-label">Codigo Postal</label>
+      <input type="text" class="form-control" formControlName="cp">
+    </div>
+    <div class="form-group campo">
+      <label class="form-label">Eliminar Inmueble</label>
+      <input type="checkbox" formControlName="borrado" >
+    </div>
+    <button type="submit" value="guardar">Guardar</button>
+  </form>
+</div>
