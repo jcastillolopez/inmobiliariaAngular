@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
 import { ClientesComponent } from './Components/clientes/clientes.component';
 import { InmueblesComponent } from './Components/inmuebles/inmuebles.component';
 import { RegistroInmuebleComponent } from './Components/inmuebles/registroInmueble/registroInmueble.component';
@@ -55,6 +56,12 @@ const routes: Routes = [
 
   { path: 'tipos', component: TiposComponent },
   { path: '**', pathMatch: 'full', redirectTo: '/inicio' },
+  { path: '', pathMatch: 'full', redirectTo: '/usuarios' },
+  { path: 'clientes', component: ClientesComponent },
+  { path: 'proveedores', component: ProveedoresComponent },
+  { path: 'inmuebles', component: InmueblesComponent },
+  { path: 'usuarios', component: UsuariosComponent},
+  { path: '', pathMatch: 'full', redirectTo: '/usuarios' }
 ];
 
 @NgModule({
@@ -62,3 +69,5 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
+ 
