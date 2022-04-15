@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule } from './Components/app-routing.module';
 
 import { AppComponent } from './app.component';
 import { ProveedoresComponent } from './Components/proveedores/proveedores.component';
@@ -23,6 +23,7 @@ import { DetalleInmuebleComponent } from './Components/inmuebles/detalleInmueble
 import { DetalleProveedorComponent } from './Components/proveedores/detalleProveedor/detalleProveedor.component';
 import { DetalleContratoComponent } from './Components/contratos/detalleContrato/detalleContrato.component';
 import { RegistroContratosComponent } from './Components/contratos/registroContratos/registroContratos.component';
+import { RolesComponent } from './Components/tipos/roles/roles.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,7 +44,8 @@ import { RegistroContratosComponent } from './Components/contratos/registroContr
     DetalleInmuebleComponent,
     DetalleProveedorComponent,
     DetalleContratoComponent,
-    RegistroContratosComponent
+    RegistroContratosComponent,
+    RolesComponent
     
   
   ],

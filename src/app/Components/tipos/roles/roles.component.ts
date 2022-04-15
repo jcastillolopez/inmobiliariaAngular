@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { TiposService } from 'src/app/services/tipos.service';
-import { tipoInterface } from 'src/app/interfaces/interface.tipo';
+import { RolesService } from 'src/app/services/TiposServices/RolesService';
+import {rolInterface} from 'src/app/interfaces/tiposInterfaces/rolInterface'
 
 @Component({
   selector: 'app-roles',
@@ -8,14 +8,15 @@ import { tipoInterface } from 'src/app/interfaces/interface.tipo';
   styleUrls: ['./roles.component.css']
 })
 export class RolesComponent implements OnInit {
-  arrListaTiposRol: tipoInterface[];
+  arrListaTiposRol: rolInterface[];
   constructor(
-    private TiposService: TiposService) { 
+    private rolService: RolesService) { 
     this.arrListaTiposRol = []
     }
 
   async ngOnInit() {
-    this.arrListaTiposRol = await this.TiposService.getAll();
+    this.arrListaTiposRol = await this.rolService.getAll();
+    console.log(this.arrListaTiposRol);
   };
 
 }

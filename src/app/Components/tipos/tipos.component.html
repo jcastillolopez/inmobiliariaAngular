@@ -2,15 +2,22 @@
   <header>    
       <h3>Tipos:</h3>     
       <ul>       
-        <li [routerLink]="['/tipos/registro']" routerLinkActive="activo">
-          Nuevo Rol
+        <li [routerLink]="['/tipos/rol']" routerLinkActive="activo">
+        Roles
         </li> 
-        <li [routerLink]="['/tipos/registro']" routerLinkActive="activo">
-          Nuevo Tipo Contrato
+        <li [routerLink]="['/tipos/contrato/registro']" routerLinkActive="activo">
+         Tipos Contratos
         </li>  
-        <li [routerLink]="['/tipos/registro']" routerLinkActive="activo">
-          Nuevo Tipo Interviniente
-        </li>         
+        <li [routerLink]="['/tipos/interviniente/registro']" routerLinkActive="activo">
+      Tipos Intervinientes
+        </li> 
+        <li [routerLink]="['/tipos/duracion/registro']" routerLinkActive="activo">
+         Tipos Duracion
+        </li>       
       </ul>   
-
   </header>
+  <main>
+  <div class="container">
+    <router-outlet></router-outlet>    
+  </div>
+</main>

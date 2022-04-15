@@ -1,22 +1,14 @@
-<div class="container">
-  <div class="nav-tab">
-      <div class="titulo">
-          <h2>ROLES</h2>
-          <p>Establecer Roles </p>
-          <ul>
-              <li [routerLink]="['/tipos/rol']" routerLinkActive="activo">
-                 Roles
-              </li>
-              <li [routerLink]="['/tipos']" routerLinkActive="activo">
-                  Tipos
-              </li>
-          </ul>
-      </div>
-  </div>
-  <div class="listado">
-      <div class="lista" *ngFor="let tipo of arrListaTipos">
-          <h3>ID:{{tipo.id}}</h3>
-          <p>{{tipo.rol}}</p>         
-      </div>
-  </div>
-</div>
+<div class="wrapper">
+    <header>    
+        <h3>Roles:</h3>     
+        <ul>       
+          <li [routerLink]="['/rol/registro']" routerLinkActive="activo">
+         Nuevo Rol
+          </li>         
+        </ul>   
+    </header>
+    <main>
+    <div class="container">
+      <router-outlet></router-outlet>    
+    </div>
+  </main>
