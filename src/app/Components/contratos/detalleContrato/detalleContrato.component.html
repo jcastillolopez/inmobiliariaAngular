@@ -1,3 +1,4 @@
+
 <div class="lista">
 <div class="campo">
   <label> Tipo Contrato:</label>
@@ -14,6 +15,14 @@
 <div class="campo">
   <label> Fecha Contrato:</label>
  <p>{{contrato.fecha_contrato|date}}</p>
+</div>
+<div class="listado">  
+  <ul class="lista" *ngFor="let interviniente of ListaIntervinientes let i =index">
+   <p>{{interviniente[i].contrato_id}}</p>
+   <p>{{interviniente.tipo_interviniente_id}}</p>
+   <p>{{interviniente[i].propiedad_cantidad}}</p>
+   <p>{{interviniente.cliente_id}}</p>
+  </ul>
 </div>
 
 <button [routerLink]="['/contratos/modificar/'+contrato.id]"routerLinkActive="activo">Modificar Contrato</button>

@@ -32,9 +32,19 @@ export class ContratosService {
       this.httpClient.get<any>('http://localhost:3000/api/inmuebles/select')
     )
   }
-  selectTipocontrato() {
+  selectTipoContrato() {
     return firstValueFrom(
       this.httpClient.get<any>('http://localhost:3000/api/tipos/contrato/select')
+    )
+  }
+  selectCliente() {
+    return firstValueFrom(
+      this.httpClient.get<any>('http://localhost:3000/api/clientes/select')
+    )
+  }
+  selectTipoInterviniente() {
+    return firstValueFrom(
+      this.httpClient.get<any>('http://localhost:3000/api/tipos/interviniente/select')
     )
   }
 }

@@ -19,49 +19,77 @@ import { DetalleInmuebleComponent } from './Components/inmuebles/detalleInmueble
 import { DetalleProveedorComponent } from './Components/proveedores/detalleProveedor/detalleProveedor.component';
 import { RegistroContratosComponent } from './Components/contratos/registroContratos/registroContratos.component';
 import { DetalleContratoComponent } from './Components/contratos/detalleContrato/detalleContrato.component';
+import { RolesComponent } from './Components/tipos/roles/roles.component';
+import { Tipos_contratoComponent } from './Components/tipos/tipos_contrato/tipos_contrato.component';
+import { Tipos_intervinienteComponent } from './Components/tipos/tipos_interviniente/tipos_interviniente.component';
+import { Tipos_duracionComponent } from './Components/tipos/tipos_duracion/tipos_duracion.component';
+import { DetalleUsuarioComponent } from './Components/usuarios/detalle.Usuario/detalle.Usuario.component';
+import { RegistroRolComponent } from './Components/tipos/roles/registroRol/registroRol.component';
+import { IntervinientesRegistroComponent } from './Components/contratos/registroContratos/intervinientesRegistro/intervinientesRegistro.component';
+import { ListaIntervinientesComponent } from './Components/contratos/registroContratos/intervinientesContrato/listaIntervinientes/listaIntervinientes.component';
 
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/inicio' },
   { path: 'inicio', component: InicioComponent },
-  { path: 'usuarios', component: UsuariosComponent },
-  { path: 'usuarios/login', component: LoginComponent },
+
   { path: 'usuarios/registro', component: RegistroUsuariosComponent },
+  { path: 'usuarios/login', component: LoginComponent },
+  {
+    path: 'usuarios', component: UsuariosComponent, children: [
+      { path: 'idUsuarios', component: DetalleUsuarioComponent }]
+  },
+
   { path: 'clientes/registro', component: RegistroClientesComponent },
   { path: 'clientes/modificar/:idCliente', component: RegistroClientesComponent },
-  { path: 'clientes', component: ClientesComponent, children: [
-      { path: ':idCliente', component: DetalleClienteComponent }
-    ] },
+  {
+    path: 'clientes', component: ClientesComponent, children: [
+      { path: ':idCliente', component: DetalleClienteComponent }]
+  },
+
   { path: 'inmuebles/registro', component: RegistroInmuebleComponent },
-  {path:'inmuebles/modificar/:idInmueble',component:RegistroInmuebleComponent},
+  { path: 'inmuebles/modificar/:idInmueble', component: RegistroInmuebleComponent },
   {
     path: 'inmuebles', component: InmueblesComponent, children: [
-    {path: ':idInmueble',component: DetalleInmuebleComponent}
-    ]
+      { path: ':idInmueble', component: DetalleInmuebleComponent }]
   },
+
   { path: 'proveedores/registro', component: RegistroProveedoresComponent },
-  {path: 'proveedores/modificar/:idProveedor', component:RegistroProveedoresComponent},
+  { path: 'proveedores/modificar/:idProveedor', component: RegistroProveedoresComponent },
   {
     path: 'proveedores', component: ProveedoresComponent, children: [
-    {path:':idProveedor', component: DetalleProveedorComponent}
-  ]},
- 
-  { path: 'balance', component: BalanceComponent },
-  { path: 'contratos/registro', component: RegistroContratosComponent },
-  { path: 'contratos/modificar/:idContrato',component:RegistroContratosComponent},
-  {
-    path: 'contratos', component: ContratosComponent, children:[
-    {path:':idContrato', component:DetalleContratoComponent}
-  ] },
+      { path: ':idProveedor', component: DetalleProveedorComponent }]
+  },
 
-  { path: 'tipos', component: TiposComponent },
+  { path: 'balance', component: BalanceComponent },
+
+  { path: 'contratos/registro', component: RegistroContratosComponent },
+  { path: 'contratos/modificar/:idContrato', component: RegistroContratosComponent },
+  {
+    path: 'contratos', component: ContratosComponent, children: [
+      { path: ':idContrato', component: DetalleContratoComponent },     
+           ] },     
+
+  {
+    path: 'intervinientes/registro', component: IntervinientesRegistroComponent, children: [
+     
+        {path: 'intervinientes', component: ListaIntervinientesComponent}
+    ] },
+   
+   
+  {
+    path: 'tipos', component: TiposComponent, children: [
+      { path: 'rol/registro', component: RegistroRolComponent },
+      { path: 'rol', component: RolesComponent },
+      { path: 'contrato', component: Tipos_contratoComponent },
+      { path: 'interviniente', component: Tipos_intervinienteComponent },
+      { path: 'duracion', component: Tipos_duracionComponent },]
+  },
+
   { path: '**', pathMatch: 'full', redirectTo: '/inicio' },
-  { path: '', pathMatch: 'full', redirectTo: '/usuarios' },
-  { path: 'clientes', component: ClientesComponent },
-  { path: 'proveedores', component: ProveedoresComponent },
-  { path: 'inmuebles', component: InmueblesComponent },
-  { path: 'usuarios', component: UsuariosComponent},
-  { path: '', pathMatch: 'full', redirectTo: '/usuarios' }
+
+
+
 ];
 
 @NgModule({
@@ -70,4 +98,3 @@ const routes: Routes = [
 })
 export class AppRoutingModule { }
 
- 

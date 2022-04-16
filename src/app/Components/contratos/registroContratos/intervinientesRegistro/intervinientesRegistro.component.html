@@ -1,0 +1,39 @@
+<header>
+    <h3>Intervinientes:</h3>
+    <ul>
+      <li [routerLink]="['/intervinientes/registro']" routerLinkActive="activo">
+        Nuevo interviniente
+      </li>
+    </ul>
+  </header>
+  <div class="formulario"> 
+  <p>Datos de los  Intervinientes :</p> 
+    <form class="registro" [formGroup]="registroForm" (ngSubmit)="enviar()">
+      <div class="form-group campo">
+        <label class="form-label">Tipo de Interviniente</label>
+      <select type="text" formControlName="tipo_interviniente_id">
+        <option [value]="tipo.id" *ngFor="let tipo of selectTipoInterviniente">{{tipo.tipo_interviniente}} </option>
+      </select>
+      </div>
+      <div class="form-group campo">
+        <label class="form-label">Interviniente</label>
+      <select type="text" formControlName="cliente_id">
+        <option [value]="interviniente.id" *ngFor="let interviniente of selectCliente">{{interviniente.nie}}    {{interviniente.apellidos}}  {{interviniente.nombre}}</option>
+      </select>
+      </div>
+      <div class="form-group campo">
+        <label class="form-label"> % Propiedad </label>
+        <input type="text" class="form-control" formControlName="propiedad_cantidad">
+      </div>         
+      <div class="form-group campo">
+        <label class="form-label">Eliminar Contrato</label>
+        <input type="checkbox" formControlName="borrado" >
+      </div>
+      <button type="submit" value="guardar">Guardar</button>
+    </form>
+  </div>
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div> 
+  
+  

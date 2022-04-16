@@ -1,0 +1,21 @@
+<div class="lista">
+  <div class="campo">
+    <label> Tipo Interviniente:</label>
+    <p>{{interviniente.tipo_interviniente_id}}</p>
+    </div>
+  <div class="campo">
+    <label>Interviniente:</label>
+    <p>{{interviniente.cliente_id}}</p>
+  </div>
+  <div class="campo">
+    <label>% de la Propiedad:</label>
+   <p>{{interviniente.propiedad_cantidad}}</p>
+  </div>
+  <div class="campo">
+    <label> Contrato:</label>
+   <p>{{interviniente.contrato_id|date}}</p>
+  </div>
+  
+  <button [routerLink]="['/intervinientes/modificar/'+interviniente.id]"routerLinkActive="activo">Modificar Contrato</button>
+  </div>
+  

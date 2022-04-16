@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { contratoInterface } from 'src/app/interfaces/contratos.interface';
-import { ContratosService } from 'src/app/services/contratos.service';
+import { contratoInterface } from 'src/app/interfaces/contratos/contratos.interface';
+import { ContratosService } from 'src/app/services/contratos/contratos.service';
 @Component({
   selector: 'app-contratos',
   templateUrl: './contratos.component.html',

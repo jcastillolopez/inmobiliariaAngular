@@ -4,14 +4,19 @@
     <li [routerLink]="['/contratos/registro']" routerLinkActive="activo">
       Nuevo contrato
     </li>
+    <li [routerLink]="['/intervinientes/registro']" routerLinkActive="activo">
+    Intervinientes
+    </li>
   </ul>
 </header>
-<div class="formulario">  
+<div class="formulario"> 
+<p>Datos del contrato :</p> 
   <form class="registro" [formGroup]="registroForm" (ngSubmit)="enviar()">
     <div class="form-group campo">
       <label class="form-label">Tipo de Contrato</label>
     <select type="text" formControlName="tipos_contratos_id">
-      <option [value]="tipo.id" *ngFor="let tipo of selectTipoContrato">{{tipo.tipo_contrato}} </option>
+      <option [value]="tipo.id" *ngFor="let tipo of selectTipoContrato">
+        {{tipo.tipo_contrato}} </option>
     </select>
     </div>
     <div class="form-group campo">
@@ -35,5 +40,7 @@
     <button type="submit" value="guardar">Guardar</button>
   </form>
 </div>
-   
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
 

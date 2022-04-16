@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
-import { ContratosService } from 'src/app/services/contratos.service';
+import { ContratosService } from 'src/app/services/contratos/contratos.service';
 
 @Component({
   selector: 'app-registroContratos',
@@ -46,7 +46,8 @@ export class RegistroContratosComponent implements OnInit {
     })
     this.selectInmueble = await this.contratosService.selectAlias(); 
     console.log(this.selectInmueble);
-    this.selectTipoContrato = await this.contratosService.selectTipocontrato(); 
+
+    this.selectTipoContrato = await this.contratosService.selectTipoContrato(); 
     console.log(this.selectTipoContrato);
   }  
     async enviar() {

@@ -8,14 +8,14 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 10vh;
+    min-height: 8vh;
     background-color: rgb(47, 54, 154);
     color: white;
     text-align: center;
 }
 
 main {
-    width: 100%;
+   
     background-color: rgb(221, 223, 223);
     display: grid;
     grid-template-columns: repeat(10, 1fr);
@@ -52,7 +52,7 @@ li.activo {
 }
 
 .container {
-    grid-column: 2/9;
+    grid-column: 2/11;
 }
 
 footer {

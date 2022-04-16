@@ -24,9 +24,15 @@ import { DetalleProveedorComponent } from './Components/proveedores/detalleProve
 import { DetalleContratoComponent } from './Components/contratos/detalleContrato/detalleContrato.component';
 import { RegistroContratosComponent } from './Components/contratos/registroContratos/registroContratos.component';
 import { RolesComponent } from './Components/tipos/roles/roles.component';
+import { Tipos_contratoComponent } from './Components/tipos/tipos_contrato/tipos_contrato.component';
+import { Tipos_duracionComponent } from './Components/tipos/tipos_duracion/tipos_duracion.component';
+import { Tipos_intervinienteComponent } from './Components/tipos/tipos_interviniente/tipos_interviniente.component';
+import { DetalleUsuarioComponent } from './Components/usuarios/detalle.Usuario/detalle.Usuario.component';
+import { IntervinientesRegistroComponent } from './Components/contratos/registroContratos/intervinientesRegistro/intervinientesRegistro.component';
+import { ListaIntervinientesComponent } from './Components/contratos/registroContratos/intervinientesContrato/listaIntervinientes/listaIntervinientes.component';
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent,    
     InicioComponent,
     ProveedoresComponent,
     RegistroProveedoresComponent,
@@ -45,7 +51,14 @@ import { RolesComponent } from './Components/tipos/roles/roles.component';
     DetalleProveedorComponent,
     DetalleContratoComponent,
     RegistroContratosComponent,
-    RolesComponent
+    RolesComponent,
+    Tipos_contratoComponent,
+    Tipos_duracionComponent,
+    Tipos_intervinienteComponent,
+    DetalleUsuarioComponent,
+    IntervinientesRegistroComponent,
+    ListaIntervinientesComponent
+
     
   
   ],
