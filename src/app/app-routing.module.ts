@@ -26,7 +26,6 @@ import { Tipos_duracionComponent } from './Components/tipos/tipos_duracion/tipos
 import { DetalleUsuarioComponent } from './Components/usuarios/detalle.Usuario/detalle.Usuario.component';
 import { RegistroRolComponent } from './Components/tipos/roles/registroRol/registroRol.component';
 import { IntervinientesRegistroComponent } from './Components/contratos/registroContratos/intervinientesRegistro/intervinientesRegistro.component';
-import { ListaIntervinientesComponent } from './Components/contratos/registroContratos/intervinientesContrato/listaIntervinientes/listaIntervinientes.component';
 
 
 const routes: Routes = [
@@ -78,11 +77,7 @@ const routes: Routes = [
            ] },     
 
   {
-    path: 'intervinientes/registro', component: IntervinientesRegistroComponent, children: [
-     
-        {path: 'intervinientes/registro', component: ListaIntervinientesComponent}
-    ] },
-   
+    path: 'intervinientes/registro', component: IntervinientesRegistroComponent },   
    
   {
     path: 'tipos', component: TiposComponent, children: [

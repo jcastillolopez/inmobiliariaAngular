@@ -29,7 +29,7 @@ import { Tipos_duracionComponent } from './Components/tipos/tipos_duracion/tipos
 import { Tipos_intervinienteComponent } from './Components/tipos/tipos_interviniente/tipos_interviniente.component';
 import { DetalleUsuarioComponent } from './Components/usuarios/detalle.Usuario/detalle.Usuario.component';
 import { IntervinientesRegistroComponent } from './Components/contratos/registroContratos/intervinientesRegistro/intervinientesRegistro.component';
-import { ListaIntervinientesComponent } from './Components/contratos/registroContratos/intervinientesContrato/listaIntervinientes/listaIntervinientes.component';
+
 @NgModule({
   declarations: [
     AppComponent,    
@@ -56,8 +56,8 @@ import { ListaIntervinientesComponent } from './Components/contratos/registroCon
     Tipos_duracionComponent,
     Tipos_intervinienteComponent,
     DetalleUsuarioComponent,
-    IntervinientesRegistroComponent,
-    ListaIntervinientesComponent
+    IntervinientesRegistroComponent
+    
 
     
   
