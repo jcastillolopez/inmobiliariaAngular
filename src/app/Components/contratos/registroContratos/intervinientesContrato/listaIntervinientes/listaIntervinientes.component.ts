@@ -11,7 +11,8 @@ import { IntervinientesServices } from 'src/app/services/contratos/interviniente
 })
 export class ListaIntervinientesComponent implements OnInit {
 
-  interviniente: intervinienteInterface
+  interviniente: intervinienteInterface;
+  ListaIntervinientes: intervinienteInterface[] = [];
 
   constructor(
     private activateRouter: ActivatedRoute,

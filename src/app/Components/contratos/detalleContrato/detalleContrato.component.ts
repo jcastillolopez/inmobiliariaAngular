@@ -15,7 +15,8 @@ import { intervinienteInterface } from 'src/app/interfaces/contratos/intervinien
 export class DetalleContratoComponent implements OnInit {
 
   contrato: contratoInterface;
-  ListaIntervinientes: any;
+  ListaIntervinientes: intervinienteInterface[]=[];
+  
   constructor(
     private activateRouter: ActivatedRoute,
     private contratoService: ContratosService,

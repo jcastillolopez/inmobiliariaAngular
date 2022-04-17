@@ -3,7 +3,7 @@ h2{
     background-color: rgb(187, 185, 185);
 }
 .lista{  
-   margin-top: 20px; 
+   margin-top: 10px; 
     display: flex;
     flex-direction: column;
    
@@ -25,11 +25,17 @@ h2{
  p{     
      grid-column: 3/5;     
  }
-button{
-   
+button{   
    width: 200px;
    border-radius: 10px;
 }
 button:hover{
    background-color:lightblue ;
+}
+.listaintervinientes{   
+   display: flex;
+   flex-direction: row;
+};
+.campointer{
+   padding-left: 20px;
 }

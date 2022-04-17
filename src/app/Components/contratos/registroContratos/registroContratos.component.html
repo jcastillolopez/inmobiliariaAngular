@@ -10,8 +10,9 @@
   </ul>
 </header>
 <div class="formulario"> 
-<p>Datos del contrato :</p> 
+
   <form class="registro" [formGroup]="registroForm" (ngSubmit)="enviar()">
+    <p>Datos del contrato :</p> 
     <div class="form-group campo">
       <label class="form-label">Tipo de Contrato</label>
     <select type="text" formControlName="tipos_contratos_id">

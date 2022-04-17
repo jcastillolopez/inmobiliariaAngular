@@ -63,17 +63,24 @@ const routes: Routes = [
 
   { path: 'balance', component: BalanceComponent },
 
-  { path: 'contratos/registro', component: RegistroContratosComponent },
-  { path: 'contratos/modificar/:idContrato', component: RegistroContratosComponent },
+  {
+    path: 'contratos/registro', component: RegistroContratosComponent, 
+  },
+  {
+    path: 'contratos/modificar/:idContrato', component: RegistroContratosComponent, children: [
+      {
+        path: 'intervinientes/modificar/:idContrato', component: IntervinientesRegistroComponent
+      }]
+  },
   {
     path: 'contratos', component: ContratosComponent, children: [
-      { path: ':idContrato', component: DetalleContratoComponent },     
+      { path: ':idContrato', component: DetalleContratoComponent }    
            ] },     
 
   {
     path: 'intervinientes/registro', component: IntervinientesRegistroComponent, children: [
      
-        {path: 'intervinientes', component: ListaIntervinientesComponent}
+        {path: 'intervinientes/registro', component: ListaIntervinientesComponent}
     ] },
    
    
