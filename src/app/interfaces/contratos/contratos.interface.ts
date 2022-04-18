@@ -9,5 +9,10 @@ export interface contratoInterface {
     update_time?:Date,
     usuario_id?: number,
     borrado?: boolean,
-    tipo_contrato:string
+    tipo_contrato: string,
+    fecha_inicio?: Date,
+    fecha_fin?: Date,
+    tipo_periodo?: string,
+    tipo_periodo_id?:number
+    cantidad_periodo?: number
 }

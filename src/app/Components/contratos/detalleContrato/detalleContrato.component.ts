@@ -30,6 +30,12 @@ export class DetalleContratoComponent implements OnInit {
       tipos_contratos_id: 0,
       borrado: false,
       tipo_contrato: "",
+      fecha_inicio: new Date(), 
+      fecha_fin: new Date(),
+      tipo_periodo:"",
+      tipo_periodo_id: 0,
+      cantidad_periodo: 0
+      
     };
   }
 
@@ -39,7 +45,7 @@ export class DetalleContratoComponent implements OnInit {
       let response = await this.intervinienteservice.getByContrato(params['idContrato'])
       this.ListaIntervinientes = response;
       console.log(this.ListaIntervinientes)
-    })
+    });
 
     this.activateRouter.params.subscribe(async params => {
       let response = await this.contratoService.getById(params['idContrato'])

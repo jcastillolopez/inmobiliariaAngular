@@ -1,4 +1,4 @@
-
+<div class="wrapper">
   <header>
     <h4>Contratos:</h4>
     <ul>
@@ -7,18 +7,16 @@
       </li>
     </ul>
   </header>
-  <div class="container">
+
   <main>
     <div class="listado">
       <ul class="lista" *ngFor="let contrato of arrListaContratos">
         <div [routerLink]="['/contratos/'+contrato.id]" routerLinkActive="activo" class="campo">
-          <h6>*- {{contrato.alias}} :</h6>
-          <p>{{contrato.tipo_contrato}} ;</p>
-          <p>{{contrato.fecha_contrato|date}}</p>
+          <h5>*{{contrato.alias}} : {{contrato.tipo_contrato}}, {{contrato.fecha_contrato|date}} </h5>
         </div>
       </ul>
     </div>
-    <div class="detalle">
+    <div class="container">
       <router-outlet></router-outlet>
     </div>
   </main>

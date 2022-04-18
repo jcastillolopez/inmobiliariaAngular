@@ -1,7 +1,4 @@
-
-<div class="container">
 <div class="lista">
-  <h4>datos del Contrato</h4>
   <div class="campo">
     <label> Tipo Contrato:</label>
     <p>{{contrato.tipo_contrato}}</p>
@@ -35,7 +32,7 @@
     <p>{{contrato.cantidad_periodo}}</p>
   </div>
   
-  <div class="lista">
+  <div class="listado">
     <h4>Intervinientes:</h4>
     <ul class="listaintervinientes" *ngFor="let interviniente of ListaIntervinientes ">
       <p class="campointer"> {{interviniente.tipo_interviniente}} : </p>
@@ -47,5 +44,4 @@
 
   <button [routerLink]="['/contratos/modificar/'+contrato.id]" routerLinkActive="activo">Modificar
     Contrato</button>
-</div>
 </div>

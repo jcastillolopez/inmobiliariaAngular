@@ -29,6 +29,8 @@ import { Tipos_duracionComponent } from './Components/tipos/tipos_duracion/tipos
 import { Tipos_intervinienteComponent } from './Components/tipos/tipos_interviniente/tipos_interviniente.component';
 import { DetalleUsuarioComponent } from './Components/usuarios/detalle.Usuario/detalle.Usuario.component';
 import { IntervinientesRegistroComponent } from './Components/contratos/registroContratos/intervinientesRegistro/intervinientesRegistro.component';
+import { Ingresos_gastosComponent } from './Components/balance/ingresos_gastos/ingresos_gastos.component';
+import { RegistroIngresosComponent } from './Components/balance/ingresos_gastos/registroIngresos/registroIngresos.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +58,9 @@ import { IntervinientesRegistroComponent } from './Components/contratos/registro
     Tipos_duracionComponent,
     Tipos_intervinienteComponent,
     DetalleUsuarioComponent,
-    IntervinientesRegistroComponent
+    IntervinientesRegistroComponent,
+    Ingresos_gastosComponent,
+    RegistroIngresosComponent
     
 
     

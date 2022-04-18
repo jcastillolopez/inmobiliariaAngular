@@ -26,6 +26,8 @@ import { Tipos_duracionComponent } from './Components/tipos/tipos_duracion/tipos
 import { DetalleUsuarioComponent } from './Components/usuarios/detalle.Usuario/detalle.Usuario.component';
 import { RegistroRolComponent } from './Components/tipos/roles/registroRol/registroRol.component';
 import { IntervinientesRegistroComponent } from './Components/contratos/registroContratos/intervinientesRegistro/intervinientesRegistro.component';
+import { Ingresos_gastosComponent } from './Components/balance/ingresos_gastos/ingresos_gastos.component';
+import { RegistroIngresosComponent } from './Components/balance/ingresos_gastos/registroIngresos/registroIngresos.component';
 
 
 const routes: Routes = [
@@ -61,24 +63,24 @@ const routes: Routes = [
   },
 
   { path: 'balance', component: BalanceComponent },
+  { path: 'ingresos/registro', component: RegistroIngresosComponent},
 
   {
-    path: 'contratos/registro', component: RegistroContratosComponent, 
+    path: 'contratos/registro', component: RegistroContratosComponent,
   },
   {
-    path: 'contratos/modificar/:idContrato', component: RegistroContratosComponent, children: [
-      {
-        path: 'intervinientes/modificar/:idContrato', component: IntervinientesRegistroComponent
-      }]
+    path: 'contratos/modificar/:idContrato', component: RegistroContratosComponent
   },
   {
     path: 'contratos', component: ContratosComponent, children: [
-      { path: ':idContrato', component: DetalleContratoComponent }    
-           ] },     
+      { path: ':idContrato', component: DetalleContratoComponent }
+    ]
+  },
 
   {
-    path: 'intervinientes/registro', component: IntervinientesRegistroComponent },   
-   
+    path: 'intervinientes/registro/:idInterviniente', component: IntervinientesRegistroComponent
+  },
+
   {
     path: 'tipos', component: TiposComponent, children: [
       { path: 'rol/registro', component: RegistroRolComponent },

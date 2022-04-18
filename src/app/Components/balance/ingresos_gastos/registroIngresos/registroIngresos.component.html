@@ -1,0 +1,67 @@
+<header>
+  <h3>Ingresos / Gastos:</h3>
+  <ul>
+    <li [routerLink]="['/ingresos/registro']" routerLinkActive="activo">
+      Nuevo Ingreso/Gasto
+    </li>
+  </ul>
+</header>
+
+<div class="container">
+  <section class="formulario">
+    <h4>Datos del ingreso/gasto :</h4>
+    <form class="registro" [formGroup]="registroForm" (ngSubmit)="enviar()">
+
+      <div class="form-group campo">
+        <label class="form-label">Inmueble</label>
+        <select type="text" formControlName="inmuebles_id">
+          <option [value]="inmueble.id" *ngFor="let inmueble of selectInmueble">
+            {{inmueble.refcatastral}} {{inmueble.alias}}</option>
+        </select>
+      </div>
+      <div class="form-group campo">
+        <label class="form-label">Tipo Concepto</label>
+        <select type="text" formControlName="tipo_concepto_id">
+          <option [value]="tipo.id" *ngFor="let tipo of selectTipoConcepto">
+            {{tipo.tipo_concepto}} </option>
+        </select>
+      </div>
+      <div class="form-group campo">
+        <label class="form-label">Concepto </label>
+        <input type="text" class="form-control" formControlName="tipo_concepto_id">
+      </div>
+      <div class="form-group campo">
+        <label class="form-label">Fecha Concepto </label>
+        <input type="date" class="form-control" formControlName="fecha_concepto">
+      </div>
+      <div class="form-group campo">
+        <label class="form-label">Ingreso </label>
+        <input type="text" class="form-control" formControlName="ingreso">
+      </div>
+      <div class="form-group campo">
+        <label class="form-label">Gasto </label>
+        <input type="text" class="form-control" formControlName="gasto">
+      </div>
+      <div class="form-group campo">
+        <label class="form-label">Proveedor</label>
+        <select type="text" formControlName="proveedor_id">
+          <option [value]="proveedor.id" *ngFor="let proveedor of selectProveedor">
+            {{proveedor.tipo_contrato}} </option>
+        </select>
+      </div>
+      <div class="form-group campo">
+        <label class="form-label">Fecha Factura </label>
+        <input type="date" class="form-control" formControlName="fecha_factura">
+     </div>
+       <div class="form-group campo">
+      <label class="form-label">Numero Factura </label>
+      <input type="text" class="form-control" formControlName="numero_factura">
+</div>
+<div class="form-group campo">
+  <label class="form-label">Eliminar Contrato</label>
+  <input type="checkbox" formControlName="borrado">
+</div>
+<button type="submit" value="guardar">Guardar</button>
+</form>
+</section>
+</div>

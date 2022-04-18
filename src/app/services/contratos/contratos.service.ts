@@ -32,11 +32,12 @@ export class ContratosService {
       this.httpClient.get<any>('http://localhost:3000/api/inmuebles/select')
     )
   }
-  selectTipoContrato() {
+  selectPeriodo() {
     return firstValueFrom(
-      this.httpClient.get<any>('http://localhost:3000/api/tipos/contrato/select')
+      this.httpClient.get<any>('http://localhost:3000/api/tipos/periodo/select')
     )
   }
+  
   selectCliente() {
     return firstValueFrom(
       this.httpClient.get<any>('http://localhost:3000/api/clientes/select')
@@ -45,6 +46,11 @@ export class ContratosService {
   selectTipoInterviniente() {
     return firstValueFrom(
       this.httpClient.get<any>('http://localhost:3000/api/tipos/interviniente/select')
+    )
+  }
+  selectTipoContrato() {
+    return firstValueFrom(
+      this.httpClient.get<any>('http://localhost:3000/api/tipos/contrato/select')
     )
   }
 }

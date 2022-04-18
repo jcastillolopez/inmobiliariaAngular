@@ -27,6 +27,9 @@ export class IntervinientesServices {
   getByContrato(pid: number) {
     return firstValueFrom(this.httpClient.get<any>(`http://localhost:3000/api/intervinientes/${pid}`))
   }
+  getByInterviniente(pid: number) {
+    return firstValueFrom(this.httpClient.get<any>(`http://localhost:3000/api/intervinientes/registro/${pid}`))
+  }
   selectClientes() {
     return firstValueFrom(
       this.httpClient.get<any>('http://localhost:3000/api/clientes/select')

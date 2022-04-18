@@ -11,6 +11,7 @@ export class ClientesComponent implements OnInit {
 
   constructor(
     private clientesService: ClientesService) { 
+    
     this.arrListaClientes = [];
     }
 

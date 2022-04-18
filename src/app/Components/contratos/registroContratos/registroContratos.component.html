@@ -4,44 +4,80 @@
     <li [routerLink]="['/contratos/registro']" routerLinkActive="activo">
       Nuevo contrato
     </li>
-    <li [routerLink]="['/intervinientes/registro']" routerLinkActive="activo">
-    Intervinientes
-    </li>
   </ul>
 </header>
-<div class="formulario"> 
-
-  <form class="registro" [formGroup]="registroForm" (ngSubmit)="enviar()">
-    <p>Datos del contrato :</p> 
-    <div class="form-group campo">
-      <label class="form-label">Tipo de Contrato</label>
-    <select type="text" formControlName="tipos_contratos_id">
-      <option [value]="tipo.id" *ngFor="let tipo of selectTipoContrato">
-        {{tipo.tipo_contrato}} </option>
-    </select>
-    </div>
-    <div class="form-group campo">
-      <label class="form-label">Inmueble</label>
-    <select type="text" formControlName="inmuebles_id">
-      <option [value]="inmueble.id" *ngFor="let inmueble of selectInmueble">{{inmueble.refcatastral}}    {{inmueble.alias}}</option>
-    </select>
-    </div>
-    <div class="form-group campo">
-      <label class="form-label">Fecha Contrato </label>
-      <input type="date" class="form-control" formControlName="fecha_contrato">
-    </div> 
-    <div class="form-group campo">
-      <label class="form-label">Valor Contrato </label>
-      <input type="text" class="form-control" formControlName="valor_contrato">
-    </div>      
-    <div class="form-group campo">
-      <label class="form-label">Eliminar Contrato</label>
-      <input type="checkbox" formControlName="borrado" >
-    </div>
-    <button type="submit" value="guardar">Guardar</button>
-  </form>
-</div>
 <div class="container">
-  <router-outlet></router-outlet>
-</div>
 
+  <section class="formulario">
+    <h4>Datos del contrato :</h4>
+    <form class="registro" [formGroup]="registroForm" (ngSubmit)="enviar()">
+
+      <div class="form-group campo">
+        <label class="form-label">Tipo de Contrato</label>
+        <select type="text" formControlName="tipos_contratos_id">
+          <option [value]="tipo.id" *ngFor="let tipo of selectTipoContrato">
+            {{tipo.tipo_contrato}} </option>
+        </select>
+      </div>
+      <div class="form-group campo">
+        <label class="form-label">Inmueble</label>
+        <select type="text" formControlName="inmuebles_id">
+          <option [value]="inmueble.id" *ngFor="let inmueble of selectInmueble">
+            {{inmueble.refcatastral}} {{inmueble.alias}}</option>
+        </select>
+      </div>
+      <div class="form-group campo">
+        <label class="form-label">Fecha Contrato </label>
+        <input type="date" class="form-control" formControlName="fecha_contrato">
+      </div>
+      <div class="form-group campo">
+        <label class="form-label">Valor Contrato </label>
+        <input type="text" class="form-control" formControlName="valor_contrato">
+      </div>
+      <div class="form-group campo">
+        <label class="form-label">Fecha Inicio </label>
+        <input type="date" class="form-control" formControlName="fecha_inicio">
+      </div>
+      <div class="form-group campo">
+        <label class="form-label">Fecha Fin </label>
+        <input type="date" class="form-control" formControlName="fecha_fin">
+      </div>
+      <div class="form-group campo">
+        <label class="form-label">Tipo Periodo</label>
+        <select type="text" formControlName="tipo_periodo_id">
+          <option [value]="tipo.id" *ngFor="let tipo of selectTipoPeriodo">
+            {{tipo.tipo_periodo}} </option>
+        </select>
+      </div>
+      <div class="form-group campo">
+        <label class="form-label">Cantidad Periodo </label>
+        <input type="text" class="form-control" formControlName="cantidad_periodo">
+      </div>
+      <div class="form-group campo">
+        <label class="form-label">Eliminar Contrato</label>
+        <input type="checkbox" formControlName="borrado">
+      </div>
+      <button type="submit" value="guardar">Guardar</button>
+    </form>
+  </section>
+  <section class="listado">
+    <h4>Intervinientes:</h4>
+    <ul *ngFor="let interviniente of ListaIntervinientes ">
+      <li class="listaintervinientes" [routerLink]="['/intervinientes/registro/' + interviniente.id]"
+        routerLinkActive="activo">
+        <p class="campointer"> {{interviniente.tipo_interviniente}} : </p>
+        <p class="campointer"> {{interviniente.apellidos}} , </p>
+        <p class="campointer"> {{interviniente.nombre}} , </p>
+        <p class="campointer"> {{interviniente.propiedad_cantidad}} %</p>
+      </li>
+    </ul>
+    <div class="container">
+      <ul>
+        <li [routerLink]="['/Intervinientes/registro']" routerLinkActive="activo">
+          Nuevo Interviniente
+        </li>
+      </ul>
+      <router-outlet></router-outlet>
+    </div>
+  </section>
+</div>

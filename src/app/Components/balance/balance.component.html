@@ -2,9 +2,14 @@
   <header>    
       <h3>Balance:</h3>     
       <ul>       
-        <li [routerLink]="['/balance/registro']" routerLinkActive="activo">
+        <li [routerLink]="['/balance']" routerLinkActive="activo">
           Nuevo Balance
         </li>
+        <ul>
+          <li [routerLink]="['/ingresos/registro']" routerLinkActive="activo">
+            Nuevo Ingreso/Gasto
+          </li>
+        </ul>
       </ul>
    
   </header>
