@@ -28,6 +28,7 @@ import { RegistroRolComponent } from './Components/tipos/roles/registroRol/regis
 import { IntervinientesRegistroComponent } from './Components/contratos/registroContratos/intervinientesRegistro/intervinientesRegistro.component';
 import { Ingresos_gastosComponent } from './Components/balance/ingresos_gastos/ingresos_gastos.component';
 import { RegistroIngresosComponent } from './Components/balance/ingresos_gastos/registroIngresos/registroIngresos.component';
+import { DetalleIngresoComponent } from './Components/balance/ingresos_gastos/detalleIngreso/detalleIngreso.component';
 
 
 const routes: Routes = [
@@ -63,7 +64,8 @@ const routes: Routes = [
   },
 
   { path: 'balance', component: BalanceComponent },
-  { path: 'ingresos/registro', component: RegistroIngresosComponent},
+  { path: 'ingresos/registro', component: RegistroIngresosComponent },
+  { path: 'ingresos/detalle', component:DetalleIngresoComponent },
 
   {
     path: 'contratos/registro', component: RegistroContratosComponent,

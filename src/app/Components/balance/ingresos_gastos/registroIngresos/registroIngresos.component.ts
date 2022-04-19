@@ -5,8 +5,9 @@ import * as dayjs from 'dayjs';
 
 import { IngresosServices } from 'src/app/services/balance/ingresos.services';
 import { ingresoInterface } from 'src/app/interfaces/balance/ingresos.interface';
-import { ContratosService } from 'src/app/services/contratos/contratos.service';
 
+import { ContratosService } from 'src/app/services/contratos/contratos.service';
+import { IntervinientesServices } from 'src/app/services/contratos/intervinientes.Service';
 @Component({
   selector: 'app-registroIngresos',
   templateUrl: './registroIngresos.component.html',
@@ -23,7 +24,8 @@ export class RegistroIngresosComponent implements OnInit {
   constructor(
     private activateRouter: ActivatedRoute,
     private ingresoService: IngresosServices,
-    private contratosService:ContratosService,
+    private contratosService: ContratosService,
+    private intervinienteService: IntervinientesServices,
   ) {
     this.selectInmueble = [];
     this.selectProveedor = [];
@@ -34,7 +36,9 @@ export class RegistroIngresosComponent implements OnInit {
       id: new FormControl(),
       fecha_concepto: new FormControl(),
       concepto: new FormControl(),
+      tipo_concepto_id: new FormControl(),
       ingreso: new FormControl(),
+      iva_porcentaje: new FormControl(),
       gasto: new FormControl(),
       proveedores_id: new FormControl(),
       inmuebles_id: new FormControl(),
@@ -43,26 +47,39 @@ export class RegistroIngresosComponent implements OnInit {
       usuario_id: new FormControl(),
       create_time: new FormControl(),
       update_time: new FormControl(),
-
+      borrado: new FormControl()
     })
   }
 
   async ngOnInit() {
-   
+
     this.selectInmueble = await this.contratosService.selectAlias();
 
-    this.selectProveedor = await this.contratosService.selectCliente(); 
+    this.selectProveedor = await this.contratosService.selectCliente();
 
-    this.selectTipoConcepto = await this.contratosService.selectTipoContrato(); 
-    
-
+    this.selectTipoConcepto = await this.ingresoService.selectTipoConcepto();
 
 
+    this.activateRouter.params.subscribe(async params => {
+      if (params['idIngreso']) {
+        let response = await this.ingresoService.getById(params['idIngreso'])
+        let ingreso = response[0]
+        ingreso.fecha_concepto = dayjs(ingreso.fecha_contrato).format('YYYY-MM-DD')
+        ingreso.fecha_factura = dayjs(ingreso.fecha_inicio).format('YYYY-MM-DD')
+        this.registroForm.setValue(ingreso)
+
+      }
+    })
+
+  }
 
 
+  async enviar() {
+    if (this.activateRouter.snapshot.params['idingreso']) {
+      await this.ingresoService.update(this.registroForm.value);
+    } else {
+      const newIngreso = await this.ingresoService.create(this.registroForm.value);
 
-   }
-  
-
-  enviar(){}
+    }
+  }
 }

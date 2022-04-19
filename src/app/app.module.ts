@@ -31,18 +31,19 @@ import { DetalleUsuarioComponent } from './Components/usuarios/detalle.Usuario/d
 import { IntervinientesRegistroComponent } from './Components/contratos/registroContratos/intervinientesRegistro/intervinientesRegistro.component';
 import { Ingresos_gastosComponent } from './Components/balance/ingresos_gastos/ingresos_gastos.component';
 import { RegistroIngresosComponent } from './Components/balance/ingresos_gastos/registroIngresos/registroIngresos.component';
+import { DetalleIngresoComponent } from './Components/balance/ingresos_gastos/detalleIngreso/detalleIngreso.component';
 
 @NgModule({
   declarations: [
-    AppComponent,    
+    AppComponent,
     InicioComponent,
     ProveedoresComponent,
     RegistroProveedoresComponent,
     InmueblesComponent,
-    RegistroInmuebleComponent,    
+    RegistroInmuebleComponent,
     UsuariosComponent,
     LoginComponent,
-    RegistroUsuariosComponent,   
+    RegistroUsuariosComponent,
     ClientesComponent,
     RegistroClientesComponent,
     TiposComponent,
@@ -60,11 +61,12 @@ import { RegistroIngresosComponent } from './Components/balance/ingresos_gastos/
     DetalleUsuarioComponent,
     IntervinientesRegistroComponent,
     Ingresos_gastosComponent,
-    RegistroIngresosComponent
-    
+    RegistroIngresosComponent,
+    DetalleIngresoComponent,
 
-    
-  
+
+
+
   ],
   imports: [
     BrowserModule,
