@@ -21,7 +21,7 @@
       </div>
       <div class="form-group campo">
         <label class="form-label">Tipo Concepto</label>
-        <select type="text" formControlName="tipo_concepto_id">
+        <select type="text" formControlName="tipo_concepto_id">         
           <option [value]="tipo.id" *ngFor="let tipo of selectTipoConcepto">
             {{tipo.tipo_concepto}} </option>
         </select>
