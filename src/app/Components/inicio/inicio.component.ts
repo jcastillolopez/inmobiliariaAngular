@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./inicio.component.css']
 })
 export class InicioComponent implements OnInit {
-
-  constructor() { }
+  fechasistema: any;
+  constructor() {
+    { this.fechasistema = new Date }
+ }
 
   ngOnInit() {
   }
-
+ 
 }

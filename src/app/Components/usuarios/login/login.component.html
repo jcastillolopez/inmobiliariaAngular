@@ -1,32 +1,31 @@
 <div class="container">
-  <div class="nav-tab">
-    <div class="titulo">
-        <h2>Login</h2> 
-        <p>Por favor introduzca su login</p>             
-          <ul>
-            <li [routerLink]="['/usuarios/login']" routerLinkActive="activo">
-              Login
-            </li>
-            <li [routerLink]="['/usuarios']" routerLinkActive="activo">
-               Usuarios
-            </li>
-          </ul>
-        </div>
-   </div> 
+ 
    <div class="registro">
-    <form FormGroup = "loginForm" (ngSubmit)="login()">
-        <div class="mb-3">
-          <label class="form-label">Nombre</label>
-          <input type="text" class="form-control"formControlName="nombre">
+    <form [formGroup] = "registroForm" (ngSubmit)="loguearse()">        
+         <div class="campo">
+           <label class="form-label">Username</label>
+           <input type="text" class="form-control"formControlName="username">
+           <p class="error" *ngIf="checkError('username', 'required')"></p>
+           <p class="error" *ngIf="checkError('nombre', 'minlength')">
+             El campo nombre debe tener más de 3 caracteres
+           </p>
          </div>
-         <div class="mb-3">
-           <label class="form-label">UserName</label>
-           <input type="text" class="form-control"formControlName="userName">
+         <div class="campo">
+          <label class="form-label">Email</label>
+          <input type="text" class="form-control"formControlName="email">
+          <p class="error" *ngIf="checkError('email', 'required')"></p>
+          <p class="error" *ngIf="checkError('email', 'pattern')">
+            El campo Email no es valido
+          </p>
          </div>
-          <div class="mb-3">
+          <div class="campo">
             <label class="form-label">Password</label>
             <input type="password" class="form-control" formControlName="password">
-          </div>          
+            <p class="error" *ngIf="checkError('password', 'valid')">
+              El campo password no es valido
+          </p>
+          </div>
+          <button type="submit" value="guardar">entrar</button>          
     </form>
   </div>
 

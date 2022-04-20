@@ -12,7 +12,8 @@
       <ul class="lista" *ngFor="let cliente of arrListaInmuebles">
         <div [routerLink]="['/inmuebles/'+cliente.id]" routerLinkActive="activo" class="campo">
          <h6>* {{cliente.refcatastral}}  </h6> 
-         <h5>   {{cliente.alias}}</h5>       
+         <h5>   {{cliente.alias}}</h5> 
+         <h5>*{{cliente.usuario_id}}</h5>      
           </div>     
       </ul>
     </div>

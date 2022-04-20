@@ -53,9 +53,7 @@ export class RegistroContratosComponent implements OnInit {
     this.activateRouter.params.subscribe(async params => {
       let response = await this.intervinienteService.getByContrato(params['idContrato'])
       this.ListaIntervinientes = response;
-      
     });
-
 
     this.activateRouter.params.subscribe(async params => {
       if (params['idContrato']) {
@@ -65,9 +63,9 @@ export class RegistroContratosComponent implements OnInit {
         contrato.fecha_inicio = dayjs(contrato.fecha_inicio).format('YYYY-MM-DD')
         contrato.fecha_fin = dayjs(contrato.fecha_fin).format('YYYY-MM-DD')
         this.registroForm.setValue(contrato)
-        
-      } 
+              } 
     })
+    
     this.selectTipoPeriodo = await this.contratosService.selectPeriodo();    
 
     this.selectInmueble = await this.contratosService.selectAlias();    

@@ -15,13 +15,14 @@ import { intervinienteInterface } from 'src/app/interfaces/contratos/intervinien
 export class DetalleContratoComponent implements OnInit {
 
   contrato: contratoInterface;
-  ListaIntervinientes: intervinienteInterface[]=[];
+  ListaIntervinientes: intervinienteInterface[];
   
   constructor(
     private activateRouter: ActivatedRoute,
     private contratoService: ContratosService,
     private intervinienteservice: IntervinientesServices) {
-
+    
+    this.ListaIntervinientes = []
     this.contrato = {
       id: 0,
       alias: "",

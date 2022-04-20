@@ -1,11 +1,48 @@
 <div class="container">
-<header>
-  <h1>
-    <H2>Inicio</H2>
-  </h1>
+  <header>    
+    <h3>Inicio:</h3>     
+    <ul>       
+      <li [routerLink]="['/usuarios/registro']" routerLinkActive="activo">
+        Nuevo Usuario
+      </li>
+      <li [routerLink]="['/usuarios/login']" routerLinkActive="activo">
+         Login
+      </li>
+    </ul>     
 </header>
 </div>
 <main>
-  
+  <nav>
+    <ul>
+      <li [routerLink]="['/inicio']" routerLinkActive="activo">
+        Inicio
+      </li>
+      <li [routerLink]="['/usuarios']" routerLinkActive="activo">
+        Usuarios
+      </li>
+      <li [routerLink]="['/clientes']" routerLinkActive="activo">
+        Clientes
+      </li>
+      <li [routerLink]="['inmuebles']" routerLinkActive="activo">
+        Inmuebles
+      </li>
+      <li [routerLink]="['contratos']" routerLinkActive="activo">
+        Contratos
+      </li>
+      <li [routerLink]="['/balance']" routerLinkActive="activo">
+        Balance
+      </li>
+      <li [routerLink]="['/proveedores']" routerLinkActive="activo">
+        Proveedores
+      </li>
+      <li [routerLink]="['/tipos']" routerLinkActive="activo">
+        Tipos</li>
+    </ul>
+  </nav>
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div> 
 </main>
-<footer></footer>
+<footer>
+  <p>{{fechasistema}} </p> 
+  </footer>

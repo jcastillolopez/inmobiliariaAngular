@@ -14,8 +14,15 @@ export class InmueblesComponent implements OnInit {
     this.arrListaInmuebles = [];
     }
 
-   async ngOnInit() {
-    this.arrListaInmuebles = await this.inmueblesservices.getAll();
-  }
+  async ngOnInit() {
 
+    let usuario_id = JSON.parse(sessionStorage.getItem('usuario_id'));
+   
+    this.arrListaInmuebles = await this.inmueblesservices.getByUsuario(usuario_id);
+    console.log(this.arrListaInmuebles)
+
+ 
+
+  }
+  
 }

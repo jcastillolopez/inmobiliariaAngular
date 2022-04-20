@@ -8,5 +8,6 @@ export interface inmuebleInterface {
     usuario_id?: number,
     borrado: boolean,
     create_time?: Date,
-    update_time?:Date,
+    update_time?: Date,
+    
 }

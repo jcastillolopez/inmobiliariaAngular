@@ -1,36 +1,48 @@
-<header>
-  <h1>APP GESTION DE INMUEBLES</h1>
-</header>
+<div class="wrapper">
 
-<main>
-  <nav>
-    <ul>
-      <li [routerLink]="['/usuarios']" routerLinkActive="activo">
-        Usuarios
-      </li>
-      <li [routerLink]="['/clientes']" routerLinkActive="activo">
-        Clientes
-      </li>
-      <li [routerLink]="['inmuebles']" routerLinkActive="activo">
-        Inmuebles
-      </li>
-      <li [routerLink]="['contratos']" routerLinkActive="activo">
-        Contratos
-      </li>
-      <li [routerLink]="['/balance']" routerLinkActive="activo">
-        Balance
-      </li>
-      <li [routerLink]="['/proveedores']" routerLinkActive="activo">
-        Proveedores
-      </li>
-      <li [routerLink]="['/tipos']" routerLinkActive="activo">
-        Tipos</li>
-    </ul>
-  </nav>
-  <div class="container">
-    <router-outlet></router-outlet>
-  </div>
-</main>
-<footer>
-<p>{{fechasistema}} </p> 
-</footer>
+  <h1>APP GESTION DE INMUEBLES</h1>
+  <header>
+    <div class="container">
+      <img class="icono"
+        src="../assets/iconos/construction_project_plan_building_architect_design_develop-75_icon-icons.com_60218.png"
+        alt="">
+      <div class="nav">
+        <ul>
+          <li [routerLink]="['/publi/precios']" routerLinkActive="activo">
+            Precios
+          </li>
+
+          <li [routerLink]="['/publi/precios']" routerLinkActive="activo">
+            Precios
+          </li>
+          <li [routerLink]="['/publis/login']" routerLinkActive="activo">
+            Ofertas
+          </li>
+          <li [routerLink]="['/administradores/registro']" routerLinkActive="activo">
+            registro
+          </li>
+          <li [routerLink]="['/usuarios/login']" routerLinkActive="activo">
+            Login
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <body>
+
+    <main>
+      <div class="fondo">
+        <div class="tema">
+          <h5> Bienvenido la app para gestionar todos sus inmuebles: </h5>
+          <h5> para poder utilizarla debe registrarse, si ya lo esta introduzca su login.</h5>
+        </div>
+        <div>
+        <router-outlet></router-outlet>
+      </div>
+      </div>
+    </main>
+  </body>
+  <footer>
+    <p>{{fechasistema}} </p>
+  </footer>

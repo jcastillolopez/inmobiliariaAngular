@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RegistroUsuariosService } from '../../services/registroUsuarios.service';
+import { RegistroUsuariosService } from '../../services/usuariosServices/registroUsuarios.service';
 import { usuarioInterface } from '../../interfaces/interface_usuario'
 @Component({
   selector: 'app-usuarios',

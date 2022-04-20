@@ -3,5 +3,6 @@ export interface usuarioInterface {
     username?: string,
     email: string,
     password: string,
+    repite_password: string,
     rol?: string
 }

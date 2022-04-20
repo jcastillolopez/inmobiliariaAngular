@@ -8,6 +8,7 @@ import { ingresoInterface } from 'src/app/interfaces/balance/ingresos.interface'
 
 import { ContratosService } from 'src/app/services/contratos/contratos.service';
 import { IntervinientesServices } from 'src/app/services/contratos/intervinientes.Service';
+import { firstValueFrom } from 'rxjs';
 @Component({
   selector: 'app-registroIngresos',
   templateUrl: './registroIngresos.component.html',
@@ -19,6 +20,8 @@ export class RegistroIngresosComponent implements OnInit {
   selectInmueble: any;
   selectProveedor: any;
   selectTipoConcepto: any;
+  resultado: number
+
 
 
   constructor(
@@ -31,18 +34,19 @@ export class RegistroIngresosComponent implements OnInit {
     this.selectProveedor = [];
     this.selectInmueble = [];
     this.selectTipoConcepto = [];
+    this.resultado = 0
 
     this.registroForm = new FormGroup({
       id: new FormControl(),
-      fecha_concepto: new FormControl(),
+      fecha_concepto: new FormControl(new Date),
       concepto: new FormControl(),
       tipo_concepto_id: new FormControl(),
-      ingreso: new FormControl(),
-      iva_porcentaje: new FormControl(),
-      gasto: new FormControl(),
+      ingreso: new FormControl(0),
+      iva_porcentaje: new FormControl(21),
+      gasto: new FormControl(0),
       proveedores_id: new FormControl(),
       inmuebles_id: new FormControl(),
-      fecha_factura: new FormControl(),
+      fecha_factura: new FormControl(new Date),
       numero_factura: new FormControl(),
       usuario_id: new FormControl(),
       create_time: new FormControl(),
@@ -53,6 +57,7 @@ export class RegistroIngresosComponent implements OnInit {
 
   async ngOnInit() {
 
+    console.log(typeof (this.registroForm.value.gasto))
     this.selectInmueble = await this.contratosService.selectAlias();
 
     this.selectProveedor = await this.contratosService.selectCliente();

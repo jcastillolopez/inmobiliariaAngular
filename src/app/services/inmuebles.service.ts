@@ -25,7 +25,10 @@ export class InmueblesService {
       this.httpClient.put<any>('http://localhost:3000/api/inmuebles/' + formValue.id, formValue)
     )
   }
-  getById(pid: number) {   
+  getById(pid: number) {
     return firstValueFrom(this.httpClient.get<any>(`http://localhost:3000/api/inmuebles/${pid}`))
+  }
+  getByUsuario(pusuario: number) {
+    return firstValueFrom(this.httpClient.get<any>(`http://localhost:3000/api/inmuebles/usuario/${pusuario}`))
   }
 }

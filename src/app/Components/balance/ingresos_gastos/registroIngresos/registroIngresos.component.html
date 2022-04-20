@@ -21,7 +21,7 @@
       </div>
       <div class="form-group campo">
         <label class="form-label">Tipo Concepto</label>
-        <select type="text" formControlName="tipo_concepto_id">         
+        <select type="text" formControlName="tipo_concepto_id">
           <option [value]="tipo.id" *ngFor="let tipo of selectTipoConcepto">
             {{tipo.tipo_concepto}} </option>
         </select>
@@ -36,36 +36,52 @@
       </div>
       <div class="form-group campo">
         <label class="form-label">Ingreso </label>
-        <input type="text" class="form-control" formControlName="ingreso">
+        <input type="number" class="form-control" formControlName="ingreso">
       </div>
       <div class="form-group campo">
         <label class="form-label">Gasto </label>
-        <input type="text" class="form-control" formControlName="gasto">
+        <input type="number" class="form-control" formControlName="gasto">
       </div>
       <div class="form-group campo">
         <label class="form-label">Porcentaje de IVA </label>
-        <input type="text" class="form-control" formControlName="iva_porcentaje">
+        <input type="number" class="form-control" formControlName="iva_porcentaje">
+      </div>
+      <div class="campo">
+        <label for="form-label"> Base Imponible : </label>
+        <p>{{(registroForm.get('ingreso').value +
+          (registroForm.get('gasto').value))/(1+(registroForm.get('iva_porcentaje').value/100))
+          }}</p>
+      </div>
+      <div class="campo">
+        <label for="form-label"> Imp IVA :</label>
+        <p>
+          {{
+          (registroForm.get('ingreso').value + (registroForm.get('gasto').value))
+          -((registroForm.get('ingreso').value +
+          (registroForm.get('gasto').value))/(1+(registroForm.get('iva_porcentaje').value/100)))
+          }}
+        </p>
       </div>
       <div class="form-group campo">
         <label class="form-label">Proveedor</label>
         <select type="text" formControlName="proveedores_id">
           <option [value]="proveedor.id" *ngFor="let proveedor of selectProveedor">
-          {{proveedor.nie}}  {{proveedor.nombre}} {{proveedor.apellidos}} </option>
+            {{proveedor.nie}} {{proveedor.nombre}} {{proveedor.apellidos}} </option>
         </select>
       </div>
       <div class="form-group campo">
         <label class="form-label">Fecha Factura </label>
         <input type="date" class="form-control" formControlName="fecha_factura">
-     </div>
-       <div class="form-group campo">
-      <label class="form-label">Numero Factura </label>
-      <input type="text" class="form-control" formControlName="numero_factura">
-</div>
-<div class="form-group campo">
-  <label class="form-label">Eliminar Contrato</label>
-  <input type="checkbox" formControlName="borrado">
-</div>
-<button type="submit" value="guardar">Guardar</button>
-</form>
-</section>
+      </div>
+      <div class="form-group campo">
+        <label class="form-label">Numero Factura </label>
+        <input type="text" class="form-control" formControlName="numero_factura">
+      </div>
+      <div class="form-group campo">
+        <label class="form-label">Eliminar Contrato</label>
+        <input type="checkbox" formControlName="borrado">
+      </div>
+      <button type="submit" value="guardar">Guardar</button>
+    </form>
+  </section>
 </div>
