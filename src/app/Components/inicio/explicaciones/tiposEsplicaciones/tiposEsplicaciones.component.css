@@ -1,0 +1,9 @@
+.wrapper{
+    margin-top:30px ;
+    background-color: lightblue;
+    color: goldenrod;
+    text-shadow: 1px 1px 1px black;
+}
+article{
+    max-width: 500px;
+}

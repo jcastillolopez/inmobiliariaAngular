@@ -33,9 +33,18 @@ import { Ingresos_gastosComponent } from './Components/balance/ingresos_gastos/i
 import { RegistroIngresosComponent } from './Components/balance/ingresos_gastos/registroIngresos/registroIngresos.component';
 import { DetalleIngresoComponent } from './Components/balance/ingresos_gastos/detalleIngreso/detalleIngreso.component';
 import { AdministradoresComponent } from './Components/usuarios/administradores/administradores.component';
+import { Publi_logoComponent } from './Components/publi_logo/publi_logo.component';
+import { RegistroDetalleIngresoComponent } from './Components/balance/ingresos_gastos/registroIngresos/registroDetalleIngreso/registroDetalleIngreso.component';
+import { InicioexplicacionesComponent } from './Components/inicio/explicaciones/inicio.explicaciones/inicio.explicaciones.component';
+import { UsuariosexplicacionesComponent } from './Components/inicio/explicaciones/usuarios.explicaciones/usuarios.explicaciones.component';
+import { EntidadesExplicacionesComponent } from './Components/inicio/explicaciones/entidadesExplicaciones/entidadesExplicaciones.component';
+import { InmueblesExplicacionesComponent } from './Components/inicio/explicaciones/InmueblesExplicaciones/InmueblesExplicaciones.component';
+import { ContratosExplicacionesComponent } from './Components/inicio/explicaciones/contratosExplicaciones/contratosExplicaciones.component';
+import { BalanceExplicacionesComponent } from './Components/inicio/explicaciones/balanceExplicaciones/balanceExplicaciones.component';
+import { TiposEsplicacionesComponent } from './Components/inicio/explicaciones/tiposEsplicaciones/tiposEsplicaciones.component';
 
 @NgModule({
-  declarations: [
+  declarations: [	
     AppComponent,   
     InicioComponent,
     InmueblesComponent,
@@ -62,12 +71,16 @@ import { AdministradoresComponent } from './Components/usuarios/administradores/
     RegistroIngresosComponent,
     DetalleIngresoComponent,
     AdministradoresComponent,
-
-
-
-
-
-  ],
+    Publi_logoComponent,
+    RegistroDetalleIngresoComponent,
+    InicioexplicacionesComponent,
+    UsuariosexplicacionesComponent,
+    EntidadesExplicacionesComponent,
+    InmueblesExplicacionesComponent,
+    ContratosExplicacionesComponent,
+    BalanceExplicacionesComponent,
+      TiposEsplicacionesComponent
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,

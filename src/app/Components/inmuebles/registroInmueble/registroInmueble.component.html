@@ -1,12 +1,16 @@
+
+<div class="wrapper">
 <header>
   <h3>Inmuebles:</h3>
   <ul>
-    <li [routerLink]="['/inmuebles/registro']" routerLinkActive="activo">
+    <button [routerLink]="['/inmuebles/registro']" routerLinkActive="activo">
       Nuevo Inmueble
-    </li>
+    </button>
   </ul>
 </header>
-<div class="formulario">
+<div class="fondo">
+<div class="inmueble">
+  <h4>Datos del Inmueble :</h4>
   <form class="registro" [formGroup]="registroForm" (ngSubmit)="enviar()">
     <div class="form-group campo">
       <label class="form-label">Alias</label>
@@ -28,10 +32,12 @@
       <label class="form-label">Codigo Postal</label>
       <input type="text" class="form-control" formControlName="cp">
     </div>
-    <div class="form-group campo">
+    <div class="form-group campoE">
       <label class="form-label">Eliminar Inmueble</label>
       <input type="checkbox" formControlName="borrado" >
-    </div>
-    <button type="submit" value="guardar">Guardar</button>
+      <button type="submit" value="guardar">Guardar</button>
+    </div>   
   </form>
+</div>
+</div>
 </div>

@@ -1,81 +1,78 @@
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 .wrapper {
     min-width: 100%;
-    min-height: 100vh;
+    min-height: 10vh;
     flex-wrap: wrapper;
     background-color: rgb(47, 54, 154);
     color: rgb(107, 208, 236);
+    text-shadow: 1px 1px 1px black;
     text-align: center;
-}
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    margin: 0 auto;
 }
 
-header {
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    min-height: 6vh;
-    background-color: rgb(47, 54, 154);
-    color: white;
-    text-align: left;
-}
-.icono {
+.logo {
     position: absolute;
-    top:5px;
-    left:5px;
+    top: 5px;
+    left: 5px;
+    width: 80px;
+    height:110px;
+    margin-bottom: 10px;
+}
+.icono {  
+    top: 5px;
+    left: 5px;
+    width: 80px;
+    height: 80px;
+}
+h4 {
+    font-style: oblique;
+    width: 80px;
+    position: absolute;
+    top: 85px;
+}
+.router {
+    background-color: rgb(47, 54, 154);
+    text-shadow: 1px 1px 1px black;
+}
+
+
+.logo:hover {
+    background-color: lightblue;
+    color: red;
+}
+
+button {
+    background-color: transparent;
+    position: absolute;
+    border: 1px solid white;
+    top: 5px;
+    right: 5px;
     width: 80px;
     height: 80px;
     margin-bottom: 10px;
-}
-nav {
-    display: flex;
-    text-align: right;
-}
-ul {
-    display: flex;
-    text-align: center;
-    align-items: center;
-    list-style: none;
-}
-li {
-    width: 100px;
-    border-radius: 5px;
-    margin: 3px;
-    text-align: center;
-}
-li:hover {
-    background-color: lightblue;
+    color: gold;
+    text-shadow: 1px 1px 1px black;
+    font-style: oblique;
+    border-radius: 50%;
 }
 
-li.activo {
-    background-color: dodgerblue;
+button:hover {
+    background-color: lightblue;
+    color: red;
 }
-.fondo { 
-    display:flex;
-    flex-wrap: wrap;
-    flex-direction: column;  
-    align-items: center;     
-    background-image: url('../assets/digitization-7114791_1920.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 80vh; 
-    color: rgb(33, 7, 7);      
-};
-.tema{
-    display: inline-block;
-    width: 100%;  
-    font-size: medium; 
+
+h1 {
+    font-style: oblique;
 }
+
 footer {
-    color: white;
+    text-align: center;
+    color: rgb(107, 208, 236);
     min-height: 5vh;
     background-color: rgb(47, 54, 154);
 }

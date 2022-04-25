@@ -1,15 +1,48 @@
-<div class="wrapper">
-  <header>    
-      <h3>Balance:</h3>     
-      <ul>       
-        <li [routerLink]="['/balance']" routerLinkActive="activo">
-          Nuevo Balance
-        </li>
-        <ul>
-          <li [routerLink]="['/ingresos/registro']" routerLinkActive="activo">
-            Nuevo Ingreso/Gasto
-          </li>
-        </ul>
-      </ul>
-   
-  </header>
+<header>
+  <h3>Balance:</h3>
+  <button [routerLink]="['/ingresos/registro']" routerLinkActive="activo">
+    Nuevo Ingreso / Gasto
+  </button>
+  <p>{{ 'Bienvenido/a : '+ username}} </p>
+</header>
+<main>
+  <nav>  
+    <ul>     
+      <li [routerLink]="['/inicio']" routerLinkActive="activo">
+        Inicio
+      </li>
+
+      <li [routerLink]="['/usuarios']" routerLinkActive="activo">
+        Usuarios
+      </li>
+      <li [routerLink]="['/clientes']" routerLinkActive="activo">
+        Entidades
+      </li>
+      <li [routerLink]="['/inmuebles']" routerLinkActive="activo">
+        Inmuebles
+      </li>
+      <li [routerLink]="['/contratos']" routerLinkActive="activo">
+        Contratos
+      </li>
+      <li [routerLink]="['/balance']" routerLinkActive="activo">
+        Balance
+      </li>
+      <li [routerLink]="['/tipos']" routerLinkActive="activo">
+        Tipos</li>
+    </ul>
+  </nav>
+  <div class="fondo">
+    <div class="listado">
+      <h4> Por Inmuebles: </h4>
+      <div class="lista" *ngFor="let inmueble of arrListaInmuebles">
+        <div [routerLink]="['/inmuebles/'+inmueble.id]" routerLinkActive="activo" class="campo">
+          <p>* {{inmueble.refcatastral}} </p>
+          <p> {{inmueble.alias}}</p>         
+        </div>
+      </div>
+    </div>
+    <div class="router">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</main>

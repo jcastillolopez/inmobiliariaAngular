@@ -2,14 +2,7 @@
  
    <div class="registro">
     <form [formGroup] = "registroForm" (ngSubmit)="loguearse()">        
-         <div class="campo">
-           <label class="form-label">Username</label>
-           <input type="text" class="form-control"formControlName="username">
-           <p class="error" *ngIf="checkError('username', 'required')"></p>
-           <p class="error" *ngIf="checkError('nombre', 'minlength')">
-             El campo nombre debe tener más de 3 caracteres
-           </p>
-         </div>
+         
          <div class="campo">
           <label class="form-label">Email</label>
           <input type="text" class="form-control"formControlName="email">
@@ -24,6 +17,7 @@
             <p class="error" *ngIf="checkError('password', 'valid')">
               El campo password no es valido
           </p>
+          <p>{{ noLogin }} </p>
           </div>
           <button type="submit" value="guardar">entrar</button>          
     </form>

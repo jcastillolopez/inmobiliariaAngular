@@ -1,48 +1,74 @@
-<div class="container">
-  <header>    
-    <h3>Inicio:</h3>     
-    <ul>       
-      <li [routerLink]="['/usuarios/registro']" routerLinkActive="activo">
-        Nuevo Usuario
-      </li>
-      <li [routerLink]="['/usuarios/login']" routerLinkActive="activo">
-         Login
-      </li>
-    </ul>     
-</header>
+<div class="wrapper">
+  <header>
+    <h4>Inicio:</h4>
+    <button [routerLink]="['/ayuda']" routerLinkActive="activo">
+      Ayuda
+    </button>
+    <h4>{{ 'Bienvenido/a : '+ username}} </h4>
+  </header>
+  <main>
+    <nav>
+      <ul>
+        <li [routerLink]="['/inicio']" routerLinkActive="activo">
+          Inicio
+        </li>
+
+        <li [routerLink]="['/usuarios']" routerLinkActive="activo">
+          Usuarios
+        </li>
+        <li [routerLink]="['/entidades']" routerLinkActive="activo">
+          Entidades
+        </li>
+        <li [routerLink]="['/inmuebles']" routerLinkActive="activo">
+          Inmuebles
+        </li>
+        <li [routerLink]="['/contratos']" routerLinkActive="activo">
+          Contratos
+        </li>
+        <li [routerLink]="['/balance']" routerLinkActive="activo">
+          Balance
+        </li>
+        <li [routerLink]="['/tipos']" routerLinkActive="activo">
+          Tipos</li>
+      </ul>
+    </nav>
+    <div class="fondo">
+      <section class="explicaciones">
+        <h4>Explicaciones : </h4>
+        <ul>
+          <li [routerLink]="['inicio']" routerLinkActive="activo">
+            Inicio
+          </li>
+
+          <li [routerLink]="['usuarios']" routerLinkActive="activo">
+            Usuarios
+          </li>
+          <li [routerLink]="['entidades']" routerLinkActive="activo">
+            Entidades
+          </li>
+          <li [routerLink]="['inmuebles']" routerLinkActive="activo">
+            Inmuebles
+          </li>
+          <li [routerLink]="['contratos']" routerLinkActive="activo">
+            Contratos
+          </li>
+          <li [routerLink]="['balance']" routerLinkActive="activo">
+            Balance
+          </li>
+          <li [routerLink]="['tipos']" routerLinkActive="activo">
+            Tipos</li>
+        </ul>
+      </section>
+      <div class="router">
+        ejmpl: solo sale si hay avisos
+        <p>Tiene cuatro avisos :</p>
+       <p> El contrato XXXX termina este mes el: dd/mm/aaaa</p>
+       <p> Cargo de XXXXX por recibo de suministro ZZZZ en dos dias</p>
+       <p>Tiene un email nuevo</p>
+       <p>la mensualidad de XXX no ha sido ingresada</p>
+           
+                <router-outlet></router-outlet>
+      </div>
+    </div>
+  </main>
 </div>
-<main>
-  <nav>
-    <ul>
-      <li [routerLink]="['/inicio']" routerLinkActive="activo">
-        Inicio
-      </li>
-      <li [routerLink]="['/usuarios']" routerLinkActive="activo">
-        Usuarios
-      </li>
-      <li [routerLink]="['/clientes']" routerLinkActive="activo">
-        Clientes
-      </li>
-      <li [routerLink]="['inmuebles']" routerLinkActive="activo">
-        Inmuebles
-      </li>
-      <li [routerLink]="['contratos']" routerLinkActive="activo">
-        Contratos
-      </li>
-      <li [routerLink]="['/balance']" routerLinkActive="activo">
-        Balance
-      </li>
-      <li [routerLink]="['/proveedores']" routerLinkActive="activo">
-        Proveedores
-      </li>
-      <li [routerLink]="['/tipos']" routerLinkActive="activo">
-        Tipos</li>
-    </ul>
-  </nav>
-  <div class="container">
-    <router-outlet></router-outlet>
-  </div> 
-</main>
-<footer>
-  <p>{{fechasistema}} </p> 
-  </footer>

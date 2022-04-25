@@ -1,23 +1,50 @@
-<div class="wrapper">
-  <header>
-    <h2> Estos son sus Clientes:</h2>
-    <p>Para actuar sobre uno pulse sobre el</p>
+<header>
+  <h3>Entidades:</h3>
+  
+    <button [routerLink]="['/clientes/registro']" routerLinkActive="activo">
+      Nueva Entidad
+    </button>
+  <p>{{ 'Bienvenido/a : ' + username }} </p>
+
+</header>
+
+<main>
+  <nav>
     <ul>
-      <li [routerLink]="['/clientes/registro']" routerLinkActive="activo">
-        Nuevo Cliente </li>
+      <li [routerLink]="['/inicio']" routerLinkActive="activo">
+        Inicio
+      </li>
+      <li [routerLink]="['/usuarios']" routerLinkActive="activo">
+        Usuarios
+      </li>
+      <li [routerLink]="['/clientes']" routerLinkActive="activo">
+        Entidades
+      </li>
+      <li [routerLink]="['/inmuebles']" routerLinkActive="activo">
+        Inmuebles
+      </li>
+      <li [routerLink]="['/contratos']" routerLinkActive="activo">
+        Contratos
+      </li>
+      <li [routerLink]="['/balance']" routerLinkActive="activo">
+        Balance
+      </li>
+      <li [routerLink]="['/tipos']" routerLinkActive="activo">
+        Tipos</li>
     </ul>
-  </header>
-  <main>
-    <div class="listado">
-      <ul class="lista" *ngFor="let cliente of arrListaClientes">
-        <div [routerLink]="['/clientes/'+cliente.id]" routerLinkActive="activo" class="campo">
-          <h6>* {{cliente.nie}}</h6>
-          <h5> {{cliente.nombre}}  {{cliente.apellidos}}</h5>
-        </div>
-      </ul>
+  </nav>
+  <div class="fondo">
+    <div class="Listado">
+    <div class="lista" *ngFor="let cliente of arrListaClientes">
+      <div [routerLink]="['/clientes/'+cliente.id]" routerLinkActive="activo" class="campo">
+        <p>*  {{cliente.nie}}</p>
+        <p> {{cliente.nombre}} {{cliente.apellidos}}</p>
+      </div>
     </div>
-    <div class="container">
+    </div>
+    <div class="router">
       <router-outlet></router-outlet>
     </div>
-  </main>
-</div>
+  </div>
+
+</main>

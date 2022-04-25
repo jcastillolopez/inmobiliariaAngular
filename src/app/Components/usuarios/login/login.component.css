@@ -1,17 +1,50 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   background-color: transparent;
+}
 
-.registro{       
+.container {
+   color: black;
+}
+
+.registro {
    display: flex;
    flex-wrap: wrap;
- flex-direction: column;
- 
-}
-.campo{
-   display: grid;
-   grid-template-columns:1fr 2fr ;
-   margin: 5px;
-   text-align: left;
-   color: gold;
-   font-size: 18px;
-   font-weight: 600;
+   flex-direction: column;
+   margin-top: 30%;
 }
 
+.campo {
+   display: grid;
+   grid-template-columns: 1fr 2fr;
+   margin: 5px;
+   text-align: left;
+   color: black;
+   font-size: 18px;  
+   font-style: oblique;
+   color: gold;
+   text-shadow: 4px 4px 4px black;
+}
+
+input {
+   border: 1px solid black;
+   background-color: lightblue;
+   font-style: oblique;
+   padding-left: 10px;
+}
+
+button {
+   margin-top: 20px;
+   background-color: rgb(47, 54, 154);
+   width: 200px;
+   border-radius: 10PX;
+   color: gold;
+   font-style: oblique;
+}
+
+button:hover {
+   background-color: lightblue;
+   color: red;
+}

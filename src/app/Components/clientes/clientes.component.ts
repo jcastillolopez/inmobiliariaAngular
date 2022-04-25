@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 import { ClientesService } from 'src/app/services/clientes.service';
 import { clienteInterface } from 'src/app/interfaces/cliente_interface';
 @Component({
@@ -8,7 +9,9 @@ import { clienteInterface } from 'src/app/interfaces/cliente_interface';
 })
 export class ClientesComponent implements OnInit {
   arrListaClientes:clienteInterface[];
-
+  administrador_id: any;
+  usuario_id: any;
+  username:any;
   constructor(
     private clientesService: ClientesService) { 
     
@@ -16,6 +19,10 @@ export class ClientesComponent implements OnInit {
     }
 
   async ngOnInit() {
+    this.administrador_id = parseInt(sessionStorage.getItem('administrador_id'));
+    this.usuario_id = parseInt(sessionStorage.getItem('usuario_id'));
+    this.username =(sessionStorage.getItem('username'));
+    
       this.arrListaClientes = await this.clientesService.getAll();  
   };
  

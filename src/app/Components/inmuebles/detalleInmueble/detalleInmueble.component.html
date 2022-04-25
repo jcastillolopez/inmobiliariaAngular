@@ -1,4 +1,6 @@
-<div class="lista"></div>
+<div class="container">
+<div class="lista">
+  <h4>Detalle del Inmueble</h4>
 <div class="campo">
   <label> Nombre:</label>
   <p>{{inmueble.alias}}</p>
@@ -19,3 +21,5 @@
   <p> {{inmueble.cp}}</p>
 </div>
 <button [routerLink]="['/inmuebles/modificar/'+inmueble.id]"routerLinkActive="activo">Modificar Inmueble</button>
+</div>
+</div>

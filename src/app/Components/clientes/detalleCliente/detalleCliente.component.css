@@ -1,30 +1,54 @@
-
-h2{
-    background-color: rgb(187, 185, 185);
+.container {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   padding: 20px 5px;
+   font-style: oblique;
 }
-.lista{   
-    grid-column: 1/3;
-    display: flex;
-    flex-direction: column;
- }
- .campo{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    margin-bottom: 0.1em;
-    height: 2em;
- }
- label{
-    grid-column: 1;
-    text-align: left;
-    padding-left: 10px;    
- }
- p{     
-     grid-column: 2/4;     
- }
-button{
+
+.lista {
+   margin-left: 50px;
+   color: black;
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: column;
+   color: gold;
+   font-style: oblique;
+}
+
+.campo {
+   display: flex;
+   flex-direction: row;
+   font-size: 18px;
+   margin-left: 10px;
+}
+
+label {
+   min-width: 150px;
+   text-align: left;
+   text-shadow: 5px 5px 5px black;
+}
+h4{
+   text-shadow: 5px 5px 5px black; 
+   color: lightgreen; 
+}
+
+p {
+   margin-left: 5px;
+   text-shadow: 5px 5px 5px black;
+}
+
+button {
    width: 200px;
    border-radius: 10px;
+   background-color: rgb(47, 54, 154);
+   font-style: oblique;
+   color: gold;
+   border: 2px solid rgb(106, 170, 191) ;
 }
-button:hover{
-   background-color:lightblue ;
+
+button:hover {
+   color: red;
+   background-color: lightblue;
+
 }

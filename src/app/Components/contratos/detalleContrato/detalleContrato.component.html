@@ -1,5 +1,5 @@
 
-<div class="container">
+<div class="wrapper">
 <div class="lista">
   <h4>datos del Contrato</h4>
   <div class="campo">
@@ -33,19 +33,19 @@
   <div class="campo">
     <label> Cantidad Periodo:</label>
     <p>{{contrato.cantidad_periodo}}</p>
-  </div>
-  
-  <div class="lista">
+  </div> 
+  </div> 
+  <div class="listado">  
     <h4>Intervinientes:</h4>
-    <ul class="listaintervinientes" *ngFor="let interviniente of ListaIntervinientes ">
+    <div class="listaintervinientes" *ngFor="let interviniente of ListaIntervinientes ">
       <p class="campointer"> {{interviniente.tipo_interviniente}} : </p>
       <p  class="campointer"> {{interviniente.apellidos}} ,  </p>
       <p  class="campointer"> {{interviniente.nombre}} , </p>
       <p class="campointer" >  {{interviniente.propiedad_cantidad}} %</p>
-    </ul>
+    </div>
+    <button [routerLink]="['/contratos/modificar/'+contrato.id]" routerLinkActive="activo">Modificar
+      Contrato</button>
+    </div>
   </div>
-
-  <button [routerLink]="['/contratos/modificar/'+contrato.id]" routerLinkActive="activo">Modificar
-    Contrato</button>
-</div>
+  <div>  
 </div>

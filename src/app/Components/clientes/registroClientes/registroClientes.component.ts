@@ -46,7 +46,7 @@ export class RegistroClientesComponent implements OnInit {
   }
   async enviar() {
     if (this.activateRouter.snapshot.params['idCliente']) {
-      await this.clientesService.update(this.registroForm.value);    
+     return await this.clientesService.update(this.registroForm.value);    
     } else {
       const newCliente = await this.clientesService.create(this.registroForm.value);
     }

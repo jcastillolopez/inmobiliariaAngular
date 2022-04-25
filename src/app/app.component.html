@@ -1,48 +1,18 @@
 <div class="wrapper">
-
-  <h1>APP GESTION DE INMUEBLES</h1>
   <header>
-    <div class="container">
-      <img class="icono"
-        src="../assets/iconos/construction_project_plan_building_architect_design_develop-75_icon-icons.com_60218.png"
-        alt="">
-      <div class="nav">
-        <ul>
-          <li [routerLink]="['/publi/precios']" routerLinkActive="activo">
-            Precios
-          </li>
+  <h1>APP GESTION DE INMUEBLES</h1>
+  <div class="logo" [routerLink]="['/inicio']" routerLinkActive="activo">
+    <img class="icono" src="../assets/iconos/construction_project_plan_building_architect_design_develop-75_icon-icons.com_60218.png" alt="">
+    <h4>Inicio</h4>
+  </div>
+  <button [routerLink]="['/publi']" routerLinkActive="activo"> Salir de la App</button>
+</header>
+</div>
 
-          <li [routerLink]="['/publi/precios']" routerLinkActive="activo">
-            Precios
-          </li>
-          <li [routerLink]="['/publis/login']" routerLinkActive="activo">
-            Ofertas
-          </li>
-          <li [routerLink]="['/administradores/registro']" routerLinkActive="activo">
-            registro
-          </li>
-          <li [routerLink]="['/usuarios/login']" routerLinkActive="activo">
-            Login
-          </li>
-        </ul>
-      </div>
-    </div>
-  </header>
+<div class="router">
+<router-outlet></router-outlet>
+</div>
 
-  <body>
-
-    <main>
-      <div class="fondo">
-        <div class="tema">
-          <h5> Bienvenido la app para gestionar todos sus inmuebles: </h5>
-          <h5> para poder utilizarla debe registrarse, si ya lo esta introduzca su login.</h5>
-        </div>
-        <div>
-        <router-outlet></router-outlet>
-      </div>
-      </div>
-    </main>
-  </body>
-  <footer>
-    <p>{{fechasistema}} </p>
-  </footer>
+<footer>
+  <p>{{fechasistema}} </p>
+</footer>

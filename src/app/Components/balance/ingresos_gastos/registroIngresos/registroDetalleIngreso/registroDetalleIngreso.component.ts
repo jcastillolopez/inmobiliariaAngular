@@ -16,13 +16,16 @@ import { IntervinientesServices } from 'src/app/services/contratos/interviniente
 })
 export class RegistroDetalleIngresoComponent implements OnInit {
   registroForm: FormGroup;
+  selectConceptoDetalle: any;
 
   constructor() { 
+    this.selectConceptoDetalle = [];
     this.registroForm = new FormGroup({
       id: new FormControl(),    
-      concepto_detalle: new FormControl(),     
-      base_imponible: new FormControl(),
-      impIVa: new FormControl(),     
+      concepto_detalle: new FormControl(), 
+      ingreso: new FormControl(0),
+      gasto: new FormControl(0),
+      iva_porcentaje: new FormControl(21),         
       usuario_id: new FormControl(),
       create_time: new FormControl(),
       update_time: new FormControl(),
@@ -32,5 +35,6 @@ export class RegistroDetalleIngresoComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  enviar() { }
+ 
 }

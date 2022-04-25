@@ -1,23 +1,57 @@
 <div class="wrapper">
-  <header>    
-      <h3>Tipos:</h3>     
-      <ul>       
-        <li [routerLink]="['/tipos/rol']" routerLinkActive="activo">
-        Roles
-        </li> 
-        <li [routerLink]="['/tipos/contrato']" routerLinkActive="activo">
-         Tipos Contratos
-        </li>  
-        <li [routerLink]="['/tipos/interviniente']" routerLinkActive="activo">
-      Tipos Intervinientes
-        </li> 
-        <li [routerLink]="['/tipos/duracion']" routerLinkActive="activo">
-         Tipos Duracion
-        </li>       
-      </ul>   
+  <header>
+    <h3>Tipos De :</h3>
+    
+    <div class="nav">
+      <li [routerLink]="['/tipos/roles']" routerLinkActive="activo">
+        Rol       
+      </li>    
+      <li [routerLink]="['/clientes']" routerLinkActive="activo">
+        Entidades
+      </li>
+      <li [routerLink]="['/inmuebles']" routerLinkActive="activo">
+        Inmuebles
+      </li>
+      <li [routerLink]="['/contratos']" routerLinkActive="activo">
+        Contratos       
+      </li>
+      <li [routerLink]="['/balance']" routerLinkActive="activo">
+       Periodicidad
+      </li>
+      <select [routerLink]="['/tipos']" routerLinkActive="activo">
+        Conceptos</select>        
+    </div>
+    <p>{{ 'Bienvenido/a :'+ username}} </p>
   </header>
   <main>
-  <div class="container">
-    <router-outlet></router-outlet>    
-  </div>
-</main>
+    <nav>
+      <ul>
+        <li [routerLink]="['/inicio']" routerLinkActive="activo">
+          Inicio
+        </li>
+
+        <li [routerLink]="['/usuarios']" routerLinkActive="activo">
+          Usuarios
+        </li>
+        <li [routerLink]="['/clientes']" routerLinkActive="activo">
+          Entidades
+        </li>
+        <li [routerLink]="['/inmuebles']" routerLinkActive="activo">
+          Inmuebles
+        </li>
+        <li [routerLink]="['/contratos']" routerLinkActive="activo">
+          Contratos
+        </li>
+        <li [routerLink]="['/balance']" routerLinkActive="activo">
+          Balance
+        </li>
+        <li [routerLink]="['/tipos']" routerLinkActive="activo">
+          Tipos</li>
+      </ul>
+    </nav>
+    <div class="fondo">
+          <div class="router">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+    </main>

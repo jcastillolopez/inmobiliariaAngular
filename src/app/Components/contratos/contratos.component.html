@@ -1,25 +1,50 @@
-
-  <header>
-    <h4>Contratos:</h4>
+<header>
+  <h4>Contratos:</h4>
+  
+  
+    <button [routerLink]="['/contratos/registro']" routerLinkActive="activo">
+      Nuevo Contrato
+    </button>
+    <p>{{ 'Bienvenido/a :'+ username}} </p>
+</header>
+<main>
+  <nav>
     <ul>
-      <li [routerLink]="['/contratos/registro']" routerLinkActive="activo">
-        Nuevo Contrato
+      <li [routerLink]="['/inicio']" routerLinkActive="activo">
+        Inicio
       </li>
+      <li [routerLink]="['/usuarios']" routerLinkActive="activo">
+        Usuarios
+      </li>
+      <li [routerLink]="['/clientes']" routerLinkActive="activo">
+      Entidades
+      </li>
+      <li [routerLink]="['/inmuebles']" routerLinkActive="activo">
+        Inmuebles
+      </li>
+      <li [routerLink]="['/contratos']" routerLinkActive="activo">
+        Contratos
+      </li>
+      <li [routerLink]="['/balance']" routerLinkActive="activo">
+        Balance
+      </li>
+      <li [routerLink]="['/tipos']" routerLinkActive="activo">
+        Tipos</li>
     </ul>
-  </header>
-  <div class="container">
-  <main>
+  </nav>
+  <div class="fondo">
     <div class="listado">
-      <ul class="lista" *ngFor="let contrato of arrListaContratos">
+      <div class="lista" *ngFor="let contrato of arrListaContratos">
         <div [routerLink]="['/contratos/'+contrato.id]" routerLinkActive="activo" class="campo">
           <h6>*- {{contrato.alias}} :</h6>
           <p>{{contrato.tipo_contrato}} ;</p>
           <p>{{contrato.fecha_contrato|date}}</p>
+
         </div>
-      </ul>
+      </div>
     </div>
-    <div class="detalle">
+    <div class="router">
       <router-outlet></router-outlet>
     </div>
-  </main>
-</div>
+  </div>
+</main>

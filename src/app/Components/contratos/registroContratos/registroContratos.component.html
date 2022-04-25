@@ -1,17 +1,17 @@
+<div class="wrapper"></div>
 <header>
-  <h3>Contratos:</h3>
+  <h3>Contrato :</h3>
   <ul>
-    <li [routerLink]="['/contratos/registro']" routerLinkActive="activo">
+    <button [routerLink]="['/contratos/registro']" routerLinkActive="activo">
       Nuevo contrato
-    </li>
+    </button>
   </ul>
 </header>
-<div class="container">
-
-  <section class="formulario">
+<div class="fondo"> 
+  
+  <section class="contrato"> 
     <h4>Datos del contrato :</h4>
     <form class="registro" [formGroup]="registroForm" (ngSubmit)="enviar()">
-
       <div class="form-group campo">
         <label class="form-label">Tipo de Contrato</label>
         <select type="text" formControlName="tipos_contratos_id">
@@ -53,31 +53,30 @@
         <label class="form-label">Cantidad Periodo </label>
         <input type="text" class="form-control" formControlName="cantidad_periodo">
       </div>
-      <div class="form-group campo">
+      <div class="form-group campoE">
         <label class="form-label">Eliminar Contrato</label>
         <input type="checkbox" formControlName="borrado">
+        <button type="submit" value="guardar">Guardar</button>
       </div>
-      <button type="submit" value="guardar">Guardar</button>
+     
     </form>
   </section>
-  <section class="listado">
-    <h4>Intervinientes:</h4>
+  <section class="listaintervinientes">
+    <h4>Intervinientes : </h4>
     <ul *ngFor="let interviniente of ListaIntervinientes ">
-      <li class="listaintervinientes" [routerLink]="['/intervinientes/registro/' + interviniente.id]"
-        routerLinkActive="activo">
-        <p class="campointer"> {{interviniente.tipo_interviniente}} : </p>
-        <p class="campointer"> {{interviniente.apellidos}} , </p>
-        <p class="campointer"> {{interviniente.nombre}} , </p>
-        <p class="campointer"> {{interviniente.propiedad_cantidad}} %</p>
-      </li>
-    </ul>
-    <div class="container">
-      <ul>
-        <li [routerLink]="['/Intervinientes/registro']" routerLinkActive="activo">
-          Nuevo Interviniente
-        </li>
-      </ul>
-      <router-outlet></router-outlet>
-    </div>
+      <li class="intervinientes"
+        [routerLink]="['intervinientes/registro/' + interviniente.id]" routerLinkActive="activo">
+        <p class="campoI"> {{ interviniente.tipo_interviniente}} : </p>
+        <p class="campoI"> {{ interviniente.apellidos}} , </p>
+        <p class="campoI"> {{ interviniente.propiedad_cantidad}} %</p>
+      </li>      
+    </ul>   
+      <button [routerLink]="['intervinientes/registro']" routerLinkActive="activo">
+        Nuevo Interviniente
+      </button> 
+      <div class="router">
+        <router-outlet></router-outlet>
+      </div> 
   </section>
+ 
 </div>

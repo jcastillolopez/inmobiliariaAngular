@@ -1,74 +1,123 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
 header {
-    width: 100%;
-    min-height: 10vh;
-    background-color: rgb(187, 185, 185);
-    display: flex;
-    flex-direction: row;
-    justify-content:space-evenly;
- 
- }
- 
- ul li {
-    display: inline-block;
-    grid-column: 2/5;
-    grid-row: 1fr;
-    list-style: none;
-    margin: 5px;
-    padding: 5px;
-    border: 1px solid black;
-    border-radius: 5px;
- }
- 
- li:hover {
-    background-color: lightblue;
- }
- 
- ul li.activo {
-    background-color: dodgerblue;
- }
- 
- main {
-    display: grid;
-    grid-template-columns: 2fr 2fr;
- }
- 
- .listado {
-    grid-template-columns: 1/3;
-    display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
- }
- 
- .container {
-    grid-template-columns: 3/5;
- }
- 
- .lista {
-    grid-column: 1/3;
-    display: flex;
-    flex-direction: column;
-    height: 1.5em;
- }
- 
- .lista:hover {
-    background-color: dodgerblue;
- }
- 
- .activo {
-    background-color: dodgerblue;
- }
- 
- .campo {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    margin-bottom: 0.1em;
- 
- }
- 
- h5 {
-    grid-column: 2/4;
-    text-align: left;
- }
- 
- h6 {
-    grid-column: 1;
- }
+   width: 100%;
+   background-color: rgb(47, 54, 154);
+   text-align: left;  
+   display:flex;  
+   color: gold;
+   font-style: oblique;
+   text-shadow: 1px 1px 1px black;
+   justify-content: space-around;
+}
+main{
+   display: flex;
+   flex-wrap: wrap;
+
+}
+p{
+  font-style: oblique;
+   text-shadow: 1px 1px 1px white;
+   background-color: aquamarine;
+}
+img {
+   margin: 0 auto;
+   width: 100%;
+   height: 100%;
+   object-fit: contain;
+}
+.fondo {
+   background-color: rgb(106, 170, 191);
+   min-width: 80%;
+   min-height: 80vh;
+   display: flex;
+   flex-wrap: wrap;
+   background-repeat: no-repeat;
+   background-size: cover;
+   min-height: 80vh;
+   justify-content:space-around;
+   align-content: flex-start;
+   font-style: oblique;
+   background-image: url('../../../assets/technology-7111797_1920corregido.jpg');
+   filter: grayscale(80%);
+   filter: brightness(60%);
+   filter: opacity(50%);
+   filter: saturate(80%);
+   color: black;
+     
+}
+nav{
+   display: flex;
+   flex-direction: column;
+   color: gold;
+   text-shadow: 1px 1px 1px black;
+   font-style: oblique;
+   margin: 10px;
+}
+ul  { 
+   position: sticky;
+   top:30%;      
+   list-style: none;
+   align-items: flex-end;
+   margin: 20px 0px;   
+   width: 20%;     
+}
+li{
+   width: 100px;
+   border: 1px solid cyan;
+   margin-top:10px;
+   border-radius: 10px;
+  
+}
+li:hover {
+   background-color: lightblue;
+   color: red;
+}
+
+ul li.activo {
+   background-color: dodgerblue;
+   color: red;
+}
+button{
+   min-width: 100px;
+   color: gold;
+   text-shadow: 1px 1px 1px black;
+   background-color: transparent;
+   border-radius: 10px;
+   border: lightblue;
+}
+button:hover{  
+   background-color: dodgerblue;
+   border-radius: 10px;
+   border: black;
+   color: red;
+}
+.explicaciones{
+   margin-left: 30px;
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: column;
+  justify-content: flex-start;
+}
+.explicaciones li{    
+   color: black;
+   text-align: left;
+   text-shadow: 1px 1px 1px gray;
+}
+
+.explicaciones li:hover{
+   background-color: lightgreen;    
+   color: red;
+   text-align: left;
+   text-shadow: 1px 1px 1px gray;
+}
+.explicaciones li.activo{
+   background-color: lawngreen;    
+   color: red;
+   text-align: left;
+   text-shadow: 1px 1px 1px gray;
+}

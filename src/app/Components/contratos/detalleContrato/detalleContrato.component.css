@@ -1,40 +1,70 @@
-*{
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
+.wrapper {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   padding: 20px 5px;
+   font-style: oblique;
 }
-.container{
-display:grid;
-grid-template-columns: 1fr 1fr;
+
+.lista {
+   margin-left:10px;
+   color: black;
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: column;  
+   font-style: oblique;
+   text-shadow: 1px 1px 1px black;
 }
-.lista{  
-  grid-column: 1;
-    width:100%;  
- }
- .campo{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); 
- }
- label{
-    grid-column: 1/2;
-    text-align: left;
-    padding-left: 10px;
-    min-height: 3em;    
- }
- p{     
-     grid-column: 2/3;     
- }
-button{   
-   width: 200px;
-   border-radius: 10px;
+.listaintervinientes
+ {
+   margin-left:10px;
+   color: black;
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: row; 
+   font-style: oblique;
 }
-button:hover{
-   background-color:lightblue ;
+.listaintervinientes:hover{
+   background-color: lightgrey;
 }
-.listaintervinientes{   
+
+.campo {
    display: flex;
    flex-direction: row;
-};
-.campointer{
-   padding-left: 20px;
+   font-size: 18px;
+   margin-left: 10px; 
+}
+.campo:hover{
+   background-color:lightgray;
+  
+}
+
+label {
+   min-width: 125px;
+   text-align: left;
+   text-shadow: 1px 1px 1px black;
+}
+h4{
+   font-style: oblique;
+   color:blue;
+   text-shadow: 1px 1px 1px black;
+}
+p {
+   margin-left: 15px;
+   text-shadow: 1px 1px 1px black; 
+}
+
+button {
+   width: 200px;
+   border-radius: 10px;
+   background-color: rgb(47, 54, 154);
+   font-style: oblique;
+   color: gold;
+   border: 2px solid rgb(106, 170, 191) ;
+}
+
+button:hover {
+   color: red;
+   background-color: lightblue;
+
 }

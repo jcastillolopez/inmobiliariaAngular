@@ -1,0 +1,131 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+header {
+   width: 100%;
+   min-height: 10vh;
+   background-color: rgb(47, 54, 154);
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+   color: gold;
+   font-style: oblique;
+   text-shadow: 1px 1px 1px black;
+}
+
+ul li {
+   list-style: none;
+   margin: 5px;
+   padding: 5px;
+   border: 1px solid black;
+   border-radius: 5px;
+}
+
+li:hover {
+   background-color: lightblue;
+   text-shadow: 1px 1px 1px black
+}
+
+ul li.activo {
+   background-color: dodgerblue;
+}
+
+.fondo { 
+   background-color: rgb(106, 170, 191);
+   min-height: 80vh;
+   display: flex;
+   flex-wrap: wrap;  
+   justify-content: space-between;
+   background-repeat: no-repeat;
+   background-size: cover;
+   font-style: oblique;
+   background-image: url('../../../../../assets/time-4559218_1920.oscurecido.jpg');
+   filter: grayscale(90%);
+   filter: brightness(60%);
+   filter: opacity(50%);
+   filter: saturate(80%);
+   color: gold;
+}
+
+.ingreso {   
+   /* max-width: 40%; */
+   margin-top: 20px;
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: row;
+   margin: 0.4em;
+   color: gold;
+   text-shadow: 1px 1px 1px black;
+   text-align: center;
+}
+.router {
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: column;
+   margin-top: 20px;
+   /* max-width: 40%; */
+}
+
+h4 {
+   color: lawngreen;
+   text-shadow: 1px 1px 1px black;
+   margin-bottom: 10px;
+}
+
+.campo { 
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   flex-direction: row;
+   margin-bottom: 0.5em;
+}
+
+.campo label {  
+   grid-column: 1/2;
+   text-align: left;
+   text-shadow: 1px 1px 1px black
+}
+
+.campo input {
+   background-color: lightblue;
+   grid-column: 2/3;
+   font-style: oblique;
+}
+
+.campoE {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   margin-bottom: 0.5em;
+   text-align: left;
+}
+.campo select {
+   background-color: rgb(196, 192, 192);
+}
+
+p {
+   grid-column: 2/3;
+   text-align: center;
+   margin-left: 10px;
+   color:gold;
+}
+
+button {
+   grid-column: 3/4;
+   min-width: 150px;
+   background-color: rgb(47, 54, 154);
+   border: 1px solid transparent;
+   padding: 5px;
+   border-radius: 5px;
+   align-self: center;
+   font-style: oblique;
+   color: gold;
+   text-shadow: 1px 1px 1px black
+}
+
+button:hover {
+   background-color: lightblue;
+   color: red;
+   text-shadow: 1px 1px 1px black
+}

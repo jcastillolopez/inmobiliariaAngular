@@ -8,7 +8,9 @@ import { ContratosService } from 'src/app/services/contratos/contratos.service';
 })
 export class ContratosComponent implements OnInit {
   arrListaContratos: contratoInterface[];
-  
+  administrador_id: any;
+  usuario_id: any;
+  username:any;
  
 
   constructor(
@@ -18,7 +20,10 @@ export class ContratosComponent implements OnInit {
    
     }
 
-  async ngOnInit() {   
+  async ngOnInit() { 
+    this.administrador_id = parseInt(sessionStorage.getItem('administrador_id'));
+    this.usuario_id = parseInt(sessionStorage.getItem('usuario_id'));
+    this.username =(sessionStorage.getItem('username'));
     this.arrListaContratos = await this.contratosService.getAll(); 
     console.log(this.arrListaContratos);
    

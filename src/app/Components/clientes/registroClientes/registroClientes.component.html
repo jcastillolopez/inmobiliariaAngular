@@ -1,12 +1,14 @@
 <header>
-  <h3>Clientes:</h3>
+  <h3>Entidad :</h3>
   <ul>
-    <li [routerLink]="['/clientes/registro']" routerLinkActive="activo">
-      Nuevo cliente
-    </li>
+    <button [routerLink]="['/clientes/registro']" routerLinkActive="activo">
+      Nueva Entidad
+    </button>
   </ul>
 </header>
-<div class="formulario">
+<div class="fondo">
+<div class="cliente">
+  <h4>Datos de la Entidad :</h4>
   <form class="registro" [formGroup]="registroForm" (ngSubmit)="enviar()">
     <div class="form-group campo">
       <label class="form-label">Nombre</label>
@@ -48,10 +50,11 @@
       <label class="form-label">Codigo Postal</label>
       <input type="text" class="form-control" formControlName="cp">
     </div>
-    <div class="form-group campo">
+    <div class="form-group campoE">
       <label class="form-label">Eliminar Cliente</label>
       <input type="checkbox" formControlName="borrado" >
-    </div>
-    <button type="submit" value="guardar">Guardar</button>
+      <button type="submit" value="guardar">Guardar</button>
+    </div>   
   </form>
+</div>
 </div>

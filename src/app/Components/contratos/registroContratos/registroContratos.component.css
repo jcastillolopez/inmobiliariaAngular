@@ -1,18 +1,26 @@
-@import url("../../../../styles.css");
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
 
 header {
    width: 100%;
-   min-height: 8vh;
-   background-color: rgb(187, 185, 185);
+   min-height: 10vh;
+   background-color: rgb(47, 54, 154);
    display: flex;
-   justify-content: space-between;
+   flex-wrap: wrap;
+   justify-content: space-around;
+   color: gold;
+   font-style: oblique;
+   text-shadow: 1px 1px 1px black;
 }
 
 ul li {
    list-style: none;
    margin: 5px;
    padding: 5px;
-   border: 1px solid black;
+   border: 1px solid transparent;
    border-radius: 5px;
 }
 
@@ -23,64 +31,114 @@ li:hover {
 ul li.activo {
    background-color: dodgerblue;
 }
-.container{
-   width: 100%;
-   display: flex;
-   flex-direction: row;     
-}
-.formulario {   
-   margin-top: 10px; }
 
-.registro {   
+.fondo {
+   background-color: rgb(106, 170, 191);
+   min-height: 80vh;
    display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+   background-repeat: no-repeat;
+   background-size: cover;
+   min-height: 80vh;
+   font-style: oblique;
+      background-image: url('../../../../assets/realtor-3182376_1920.oscurecido.jpg');
+   filter: grayscale(80%);
+   filter: brightness(60%);
+   filter: opacity(50%);
+   filter: saturate(80%);
+   color: lawngreen;
+}
+
+.contrato {
+   margin-top: 20px;
+   display: flex;
+   flex-wrap: wrap;
    flex-direction: column;
-   margin: 0.5em;
-  
+   margin: 0.4em;
+   color: gold;
+   text-shadow: 1px 1px 1px 
 }
-.campo {
-   display: grid;
-   grid-template-columns: repeat(6, 1fr);
-   margin-bottom: 0.5em;
-}
-.campo label {
-   grid-column: 1/3;
-   text-align: left;
-}
-select{
-   grid-column: 3/6;
-}
-.campo input {
-   grid-column: 3/6
-   ;
-}
-button {
-   width: 200px;
-   border: 1px solid black;
-   padding: 5px;
-   border-radius: 5px; 
-   align-self: center;
-}
-button:hover{
-   background-color: lightblue;
-}
-.listado{
-   grid-column: 2/6;
-   margin-top: 10px;
-}
-.listaintervinientes{   
+
+.intervinientes {
    display: flex;
-   flex-direction: row;  
-};
-.listaintervinientes:hover{   
+   flex-wrap: wrap;
+   flex-direction: row;
+   margin-top: 20px;
+   color: gold;
+   text-shadow: 1px 1px 1px black;
+
+}
+
+.intervinientes:hover {
    display: flex;
    flex-direction: row;
-   background-color: lightblue
-};
-.campointer{
-   padding-left: 20px;  
+   background-color: lightblue;
+   color: red;
 }
-p{
-   grid-column: 1/3; 
-   text-align: center;
-   margin-left: 10px;
- }
+
+h4 {
+   color: lawngreen;
+   text-shadow: 1px 1px 1px black;
+}
+
+.registro {
+   margin-top: 20px;
+}
+
+.listaintervinientes {
+   margin-top: 20px;
+}
+
+.campo {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   flex-direction: row;
+   margin-bottom: 0.5em;
+}
+
+.campo label {
+   grid-column: 1;
+   text-align: left;
+   text-shadow: 1px 1px 1px black
+}
+
+.campo input {
+   background-color: lightblue;
+   grid-column: 2/3;
+   font-style: oblique;
+}
+
+.campoI {
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: row;
+}
+
+.campoE {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   margin-bottom: 0.5em;
+   text-align: left;
+   text-shadow: 1px 1px 1px black
+}
+
+.campo select {
+   background-color: rgb(196, 192, 192);
+}
+
+button { 
+   grid-column: 3/4;  
+   min-width: 150px;
+   background-color:rgb(47, 54, 154) ;
+   border: 1px solid black;
+   padding: 5px;
+   border-radius: 10px; 
+   align-self: center;
+   font-style: oblique;
+   color: gold;
+}
+button:hover{
+   color: red;
+   background-color: lightblue;
+}

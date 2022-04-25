@@ -39,7 +39,6 @@ export class DetalleClienteComponent implements OnInit {
     this.activateRouter.params.subscribe(async params => {
       let response = await this.clienteService.getById(params['idCliente'])
       this.cliente = response[0]
-
     })
   }
   

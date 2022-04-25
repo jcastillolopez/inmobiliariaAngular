@@ -1,0 +1,37 @@
+<div class="wrapper">
+<header>
+  <div class="container"> 
+    <div class="nav">      
+      <ul>
+        <li [routerLink]="['/publi/precios']" routerLinkActive="activo">
+          Precios
+        </li>
+
+        <li [routerLink]="['/publi/precios']" routerLinkActive="activo">
+          Precios
+        </li>
+        <li [routerLink]="['/publi/ofertas']" routerLinkActive="activo">
+          Ofertas
+        </li>
+      </ul>
+    </div>
+        <div class="nav">
+        <li [routerLink]="['administradores/registro']" routerLinkActive="activo">
+          registro
+        </li>
+        <li [routerLink]="['usuarios/login']" routerLinkActive="activo">
+          Login
+        </li>
+      </div>
+     
+  </div>
+</header>
+<div class="fondo">
+  <div class="tema">
+    <h5> Bienvenido la app para gestionar todos sus inmuebles: </h5>
+    <h5> para poder utilizarla debe registrarse, si ya lo esta introduzca su login.</h5>
+  </div>
+  <div>
+  <router-outlet></router-outlet>
+</div>
+</div>

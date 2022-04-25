@@ -1,18 +1,25 @@
-@import url("../../../../styles.css");
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
 
 header {
    width: 100%;
    min-height: 10vh;
-   background-color: rgb(187, 185, 185);
+   background-color: rgb(47, 54, 154);
    display: flex;
-   justify-content: space-between;
+   flex-wrap: wrap;
+   justify-content: space-around;
+   color: gold;
+   font-style: oblique;
+   text-shadow: 1px 1px 1px black;
 }
 
 ul li {
    list-style: none;
    margin: 5px;
-   padding: 5px;
-   border: 1px solid black;
+   padding: 5px;  
    border-radius: 5px;
 }
 
@@ -24,40 +31,82 @@ ul li.activo {
    background-color: dodgerblue;
 }
 
-.formulario {
-   margin-top: 10px;
-   width: 100%;
-   display: grid;
-   grid-template-columns: 1fr 3fr 1fr;
-}
-
-.registro {
-   grid-column: 2/3;
+.fondo {
+   background-color: rgb(106, 170, 191);
+   min-height: 80vh;
    display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+   background-repeat: no-repeat;
+   background-size: cover;
+   min-height: 80vh;
+   font-style: oblique;
+      background-image: url('../../../../assets/realtor-3182376_1920.oscurecido.jpg');
+   filter: grayscale(80%);
+   filter: brightness(60%);
+   filter: opacity(50%);
+   filter: saturate(80%);
+   color: lawngreen;
+}
+.inmueble { 
+   margin-top: 20px;
+   display: flex;
+   flex-wrap: wrap;
    flex-direction: column;
+   text-align: center;
+   margin: 0.4em;  
+}
+h4 {
+   color: lawngreen;  
 }
 
-
+.registro { 
+   color: gold;      
+   margin-top: 20px;   
+}
 .campo {
    display: grid;
-   grid-template-columns: repeat(4, 1fr);
-   margin-bottom: 0.5em;
+   grid-template-columns: 1fr 1fr;
+   flex-direction: row;
+   margin-bottom: 0.5em;   
 }
 
 .campo label {
    grid-column: 1;
    text-align: left;
+  
+   
 }
-
+.campoE label {
+   grid-column: 1;
+   text-align: left;  
+}
 .campo input {
-   grid-column: 2/5;
+   background-color: lightblue;
+   grid-column: 2/3;
+   font-style: oblique;
 }
-
-
-button {
-   width: 200px;
-   border: 1px solid black;
+.campoE {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   margin-bottom: 0.5em;
+   text-align: left;
+ 
+}
+button { 
+   grid-column: 3/4;  
+   min-width: 150px;
+   background-color:rgb(47, 54, 154) ;
+   border: 1px solid transparent;
    padding: 5px;
-   border-radius: 5px; 
+   border-radius: 10px; 
    align-self: center;
+   font-style: oblique;
+   color: gold;
+   text-shadow: 1px 1px 1px black
+}
+button:hover{
+   color: red;
+   text-shadow: 1px 1px 1px black;
+   background-color: lightblue;
 }

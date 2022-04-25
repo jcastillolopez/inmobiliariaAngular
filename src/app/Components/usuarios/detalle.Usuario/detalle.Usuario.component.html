@@ -1,3 +1,24 @@
-<p>
-  detalle.Usuario works!
-</p>
+
+<div class="container">   
+  <div class="lista">
+      <h4>Detalle del Usuario</h4>
+  <div class="campo">
+      <label> Username:</label>
+      <p>{{usuario.username}}</p>
+  </div>  
+  <div class="campo">
+      <label> Email:</label>
+     <p>{{usuario.email}}</p>
+  </div>
+  <div class="campo">
+      <label> Password:</label>
+     <p>{{usuario.password}}</p>
+  </div>
+  <div class="campo">
+      <label> Rol:</label>
+      <p>{{usuario.rol}}</p>
+  </div>
+  
+  <button [routerLink]="['/usuarios/modificar/'+ usuario.id]"routerLinkActive="activo">Modificar Usuario</button>
+  </div>
+  </div>

@@ -1,4 +1,7 @@
+
+<div class="container">   
 <div class="lista">
+    <h4>Detalle del Cliente</h4>
 <div class="campo">
     <label> Nombre:</label>
     <p>{{cliente.nombre}}</p>
@@ -38,4 +41,5 @@
     <p> {{cliente.cp}}</p>
 </div>
 <button [routerLink]="['/clientes/modificar/'+cliente.id]"routerLinkActive="activo">Modificar Cliente</button>
+</div>
 </div>
